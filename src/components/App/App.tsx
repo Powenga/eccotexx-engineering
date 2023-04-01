@@ -13,7 +13,7 @@ const App: FC = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React
+        ECCOTEXX
       </a>
       <button type="button">fkasdjf</button>
     </header>
