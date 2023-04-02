@@ -1,8 +1,12 @@
 import { FC } from 'react'
-import './App.css'
+import block from 'bem-css-modules'
+import Text from '../Text/Text'
+import styles from './App.module.css'
+
+const b = block(styles)
 
 const App: FC = () => (
-  <div className="App">
+  <div className={b()}>
     <header className="App-header">
       <p>
         Edit <code>src/App.tsx</code> and save to reload.
@@ -13,7 +17,7 @@ const App: FC = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        ECCOTEXX
+        <Text>ECCOTEXX</Text>
       </a>
       <button type="button">fkasdjf</button>
     </header>

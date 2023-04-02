@@ -1,6 +1,13 @@
 @import-normalize;
 @import url(./vendor/fonts/fonts.css);
 
+:root {
+  --text-color: #5b5b5b;
+  --color-green: #539e2f;
+  --color-white: #fff;
+  --color-pink: #e6007d;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
