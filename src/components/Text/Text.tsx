@@ -1,9 +1,9 @@
-import { forwardRef, PropsWithChildren } from 'react'
-import block from 'bem-css-modules'
-import cn from 'classnames'
-import styles from './Text.module.css'
+import { forwardRef, PropsWithChildren } from 'react';
+import block from 'bem-css-modules';
+import cn from 'classnames';
+import styles from './Text.module.css';
 
-const b = block(styles)
+const b = block(styles);
 
 export enum TextTag {
   p = 'p',
@@ -41,13 +41,13 @@ export enum TextAlign {
 }
 
 export interface IText {
-  Tag?: TextTag
-  type?: TextType
-  style?: TextStyle
-  weight?: TextWeight
-  align?: TextAlign
-  className?: string
-  hovered?: boolean
+  Tag?: TextTag;
+  type?: TextType;
+  style?: TextStyle;
+  weight?: TextWeight;
+  align?: TextAlign;
+  className?: string;
+  hovered?: boolean;
 }
 
 const Text = forwardRef<HTMLParagraphElement, PropsWithChildren<IText>>(
@@ -80,6 +80,6 @@ const Text = forwardRef<HTMLParagraphElement, PropsWithChildren<IText>>(
       {children}
     </Tag>
   )
-)
+);
 
-export default Text
+export default Text;

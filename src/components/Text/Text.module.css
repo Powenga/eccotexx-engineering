@@ -1,5 +1,5 @@
 .text {
-  font-family: 'Roboto condensed';
+  font-family: 'Roboto Condensed';
   color: var(--text-color);
   font-weight: 400;
   line-height: 140%;
@@ -16,7 +16,9 @@
 }
 .text_type_menu {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
+  color: inherit;
+  text-transform: uppercase;
 }
 .text_type_subtitle {
   font-size: 32px;
