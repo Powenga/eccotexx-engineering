@@ -6,33 +6,28 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "airbnb",
-    "airbnb/hooks",
     "plugin:react/jsx-runtime",
     "airbnb-typescript",
     "prettier"
   ],
-  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",
-    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 14,
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "import/prefer-default-export": "off",
-    "react/destructuring-assignment": "off",
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": "arrow-function"
-      }
-    ],
-    "react/prop-types": "off"
+    "react/function-component-definition": "off",
+    "react/jsx-key": "error",
+    "react/require-default-props": "off"
   }
 }
