@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import block from 'bem-css-modules';
 import Text, { TextStyle, TextType } from '../../Text/Text';
 import styles from './Intro.module.css';
@@ -5,7 +6,7 @@ import logo from '../../../images/logo.svg';
 
 const b = block(styles);
 
-const Intro = () => (
+const Intro: FC = () => (
   <div className={b()}>
     <div className={b('text-wrap')}>
       <Text type={TextType.title} style={TextStyle.accent}>

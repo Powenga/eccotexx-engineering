@@ -29,6 +29,7 @@
     "react/function-component-definition": "off",
     "react/jsx-key": "error",
     "react/require-default-props": "off",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "import/prefer-default-export": "off"
   }
 }

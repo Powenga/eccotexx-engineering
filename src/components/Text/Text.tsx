@@ -18,6 +18,7 @@ export enum TextType {
   main = 'main',
   intro = 'intro',
   menu = 'menu',
+  advantages = 'advantages',
   subtitle = 'subtitle',
   title = 'title',
 }

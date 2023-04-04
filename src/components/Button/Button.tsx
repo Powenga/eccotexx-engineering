@@ -24,7 +24,6 @@ const Button: FC<PropsWithChildren<Props>> = ({
     {children}
     <div className={b('decoration')} />
     <div className={b('decoration')} />
-    <div className={b('decoration')} />
   </button>
 );
 

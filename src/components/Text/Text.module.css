@@ -1,5 +1,5 @@
 .text {
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Arial';
   color: var(--text-color);
   font-weight: 400;
   line-height: 140%;
@@ -20,6 +20,12 @@
   color: inherit;
   text-transform: uppercase;
 }
+.text_type_advantages {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
 .text_type_subtitle {
   font-size: 32px;
   font-weight: 700;
@@ -27,6 +33,7 @@
 .text_type_title {
   font-size: 40px;
   font-weight: 700;
+  color: inherit;
 }
 
 /*Styles */

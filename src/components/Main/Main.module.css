@@ -3,6 +3,5 @@
 }
 
 .main__section {
-  width: calc(1258 / 1440 * 100%);
   margin: 0 auto 150px;
 }
