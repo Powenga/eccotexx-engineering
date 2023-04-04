@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import cn from 'classnames';
 import Text, { TextTag, TextType, TextWeight } from '../Text/Text';
 import menuItems from './menu-items';
-import logo from './logo.svg';
+import logo from '../../images/logo.svg';
 import Button, { ButtonType } from '../Button/Button';
 import 'swiper/css';
 import 'swiper/css/pagination';

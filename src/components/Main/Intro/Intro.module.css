@@ -1,0 +1,14 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro__text-wrap {
+  width: calc(619 / 1258 * 100%);
+}
+
+.intro__logo {
+  width: calc(619 / 1258 * 100%);
+}
