@@ -2,19 +2,24 @@ import { FC } from 'react';
 import block from 'bem-css-modules';
 import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './Header.module.css';
+import cn from 'classnames';
 import Text, { TextTag, TextType, TextWeight } from '../Text/Text';
 import menuItems from './menu-items';
 import logo from './logo.svg';
 import Button, { ButtonType } from '../Button/Button';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import styles from './Header.module.css';
 import slides from './slides/slides';
 
 const b = block(styles);
 
-const Header: FC = () => (
-  <header className={b()}>
+type Props = {
+  className?: string;
+};
+
+const Header: FC<Props> = ({ className = '' }) => (
+  <header className={cn(b(), className)}>
     <div className={b('menu')}>
       <a href="/" className={b('logo-wrap')}>
         <img src={logo} alt="Логотип" className={b('logo')} />

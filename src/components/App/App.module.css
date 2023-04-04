@@ -3,3 +3,7 @@
   width: 100%;
   max-width: 1920px;
 }
+
+.app__header {
+  margin-bottom: 150px;
+}
