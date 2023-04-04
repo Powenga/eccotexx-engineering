@@ -4,4 +4,9 @@
 
 .main__section {
   margin: 0 auto 150px;
+  width: calc(1258 / 1440 * 100%);
+}
+
+.main__section_type_wide {
+  width: 100%;
 }

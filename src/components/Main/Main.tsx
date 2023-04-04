@@ -10,7 +10,7 @@ const Main = () => (
     <section className={b('section')}>
       <Intro />
     </section>
-    <section className={b('section', { type: 'accent' })}>
+    <section className={b('section', { type: 'wide' })}>
       <Advantages />
     </section>
   </main>
