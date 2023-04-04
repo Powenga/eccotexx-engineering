@@ -10,7 +10,7 @@ const Advantages: FC = () => (
   <div className={b()}>
     <ul className={b('list')}>
       {advantages.map(({ id, text, accent }) => (
-        <li key={id} className={b('item')}>
+        <li key={id}>
           <Text className={b('text')} type={TextType.advantages}>
             {text}
           </Text>
