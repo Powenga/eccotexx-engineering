@@ -1,3 +1,6 @@
+import rebarImg from './rebar.jpg';
+import fibraImg from './fibra.jpg';
+
 export const products = [
   {
     id: 1,
@@ -6,12 +9,17 @@ export const products = [
       {
         type: 'span',
         props: { className: 'accept' },
-        childrens: [
-          'Eccotexx ',
-          { type: 'script', props: null, childrens: ['alert("!")'] },
-          '',
-        ],
+        childrens: ['Eccotexx '],
       },
+    ],
+    content: [
+      'Предназначена для ',
+      {
+        type: 'span',
+        props: { className: 'product-accent' },
+        childrens: ['линейного '],
+      },
+      'армирования бетонных конструкций',
     ],
     advantages: [
       'Hевосприимчивость к коррозии',
@@ -19,6 +27,10 @@ export const products = [
       'Простота проведения работ',
       'Hизкий удельный вес',
     ],
+    img: {
+      src: rebarImg,
+      alt: 'Композитная арматура',
+    },
   },
   {
     id: 2,
@@ -27,8 +39,17 @@ export const products = [
       {
         type: 'span',
         props: { className: 'accept' },
-        childs: ['FibraMax'],
+        childrens: ['FibraMax'],
       },
+    ],
+    content: [
+      'Предназначена для ',
+      {
+        type: 'span',
+        props: { className: 'product-accent' },
+        childrens: ['дисперсного'],
+      },
+      ' армирования бетонных конструкций',
     ],
     advantages: [
       'Равномерное распределение в бетоне',
@@ -36,9 +57,9 @@ export const products = [
       'Hизкий удельный вес',
       'Отсутствие износа рукавов бетононасоса',
     ],
-  },
-  {
-    id: 3,
-    title: [],
+    img: {
+      src: fibraImg,
+      alt: 'Композитная макрофибра',
+    },
   },
 ];

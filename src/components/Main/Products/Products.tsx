@@ -13,14 +13,37 @@ const Products: FC = () => (
       Продукция компании
     </Text>
     <ul className={b('list')}>
-      {products.map(({ id, title }) => (
-        <li className={b('item')} key={id}>
-          <ParsedComponent
-            rootComponent={Text}
-            rootProps={{ className: b('title'), Tag: TextTag.h2 }}
-            childrens={title}
-            createClassFuntion={b}
-          />
+      {products.map(({ id, title, content, advantages, img }) => (
+        <li key={id} className={b('item')}>
+          <div>
+            <ParsedComponent
+              rootComponent={Text}
+              rootProps={{
+                className: b('product-title'),
+                Tag: TextTag.h2,
+                type: TextType.subtitle,
+              }}
+              childrens={title}
+              createClassFuntion={b}
+            />
+            <ParsedComponent
+              rootComponent={Text}
+              rootProps={{ className: b('product-content') }}
+              childrens={content}
+              createClassFuntion={b}
+            />
+            <ul className={b('advantages')}>
+              {advantages.map((elem, index) => (
+                <li key={elem}>
+                  <Text className={b('advantages-text')}>
+                    <span className={b('advantages-icon')}>{index + 1}</span>
+                    <span>{elem}</span>
+                  </Text>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <img src={img.src} alt={img.alt} className={b('product-img')} />
         </li>
       ))}
     </ul>
