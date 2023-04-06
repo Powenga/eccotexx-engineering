@@ -1,0 +1,19 @@
+.products {
+  display: block;
+}
+
+.products__title {
+  margin: 0 0 50px;
+}
+
+.products__list {
+}
+
+.products__item {
+}
+
+.products__accept {
+}
+
+.products__accept_type_bold {
+}
