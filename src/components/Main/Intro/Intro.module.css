@@ -9,6 +9,18 @@
   width: calc(619 / 1258 * 100%);
 }
 
+.intro__title {
+  margin: 0 0 50px;
+}
+
+.intro__paragraph {
+  margin: 0 0 30px;
+}
+
+.intro__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .intro__logo {
   width: calc(619 / 1258 * 100%);
 }

@@ -9,15 +9,19 @@ const b = block(styles);
 const Intro: FC = () => (
   <div className={b()}>
     <div className={b('text-wrap')}>
-      <Text type={TextType.title} style={TextStyle.accent}>
+      <Text
+        type={TextType.title}
+        style={TextStyle.accent}
+        className={b('title')}
+      >
         ECCOTEXX
       </Text>
-      <Text type={TextType.intro}>
+      <Text type={TextType.intro} className={b('paragraph')}>
         EccoTexx - научно-производственная компания, специализирующаяся на
         разработке, производстве и внедрении композитных армирующих материалов
         для применения в бетонных конструкциях.
       </Text>
-      <Text type={TextType.intro}>
+      <Text type={TextType.intro} className={b('paragraph')}>
         Уникальный комплексный подход включает 3D-сканирование объекта,
         BIM-проектирование, расчет конструкций с помощью программного комплекса
         «ЛИРА-САПР».
