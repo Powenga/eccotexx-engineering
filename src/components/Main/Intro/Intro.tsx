@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import block from 'bem-css-modules';
-import Text, { TextStyle, TextType } from '../../Text/Text';
+import Text, { TextStyle, TextTag, TextType } from '../../Text/Text';
 import styles from './Intro.module.css';
 import logo from '../../../images/logo.svg';
 
@@ -10,6 +10,7 @@ const Intro: FC = () => (
   <div className={b()}>
     <div className={b('text-wrap')}>
       <Text
+        Tag={TextTag.h1}
         type={TextType.title}
         style={TextStyle.accent}
         className={b('title')}

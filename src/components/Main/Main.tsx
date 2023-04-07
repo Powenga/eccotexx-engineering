@@ -3,6 +3,7 @@ import styles from './Main.module.css';
 import Intro from './Intro/Intro';
 import Advantages from './Advantages/Advantages';
 import Products from './Products/Products';
+import Objects from './Objects/Objects';
 
 const b = block(styles);
 
@@ -16,6 +17,9 @@ const Main = () => (
     </section>
     <section className={b('section')}>
       <Products />
+    </section>
+    <section className={b('section', { type: 'wide' })}>
+      <Objects />
     </section>
   </main>
 );

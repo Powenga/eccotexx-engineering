@@ -9,7 +9,7 @@ const b = block(styles);
 
 const Products: FC = () => (
   <div className={b()}>
-    <Text type={TextType.title} className={b('title')}>
+    <Text Tag={TextTag.h2} type={TextType.title} className={b('title')}>
       Продукция компании
     </Text>
     <ul className={b('list')}>

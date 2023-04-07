@@ -21,6 +21,9 @@ export enum TextType {
   advantages = 'advantages',
   subtitle = 'subtitle',
   title = 'title',
+  objectTitle = 'object-title',
+  objectSubtitle = 'object-subtitle',
+  objectParagraph = 'object-paragraph',
 }
 
 export enum TextStyle {
