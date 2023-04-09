@@ -5,6 +5,7 @@ import Features from './Features/Features';
 import Products from './Products/Products';
 import Objects from './Objects/Objects';
 import Advantages from './Advantages/Advantages';
+import Interaction from './Interaction/Interaction';
 
 const b = block(styles);
 
@@ -24,6 +25,9 @@ const Main = () => (
     </section>
     <section className={b('section')}>
       <Advantages />
+    </section>
+    <section className={b('section')}>
+      <Interaction />
     </section>
   </main>
 );

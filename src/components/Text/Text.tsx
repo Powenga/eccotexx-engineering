@@ -26,6 +26,7 @@ export enum TextType {
   objectParagraph = 'object-paragraph',
   advantagesTitle = 'advantages-title',
   advantagesContent = 'advantages-content',
+  accordionPreview = 'accordion-preview',
 }
 
 export enum TextStyle {
