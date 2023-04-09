@@ -1,0 +1,70 @@
+.advanteges {
+  display: block;
+}
+
+.advanteges__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.advanteges__card {
+  position: relative;
+  box-sizing: border-box;
+  flex-basis: calc(344 / 1258 * 100%);
+  min-height: 344px;
+  padding: 20px;
+  background-color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.advanteges__decoration {
+  position: absolute;
+  z-index: 0;
+}
+
+.advanteges__decoration:first-of-type {
+  bottom: -9px;
+  left: -150px;
+  width: calc(650 / 344 * 100%);
+  height: calc(300 / 344 * 100%);
+  clip-path: polygon(0 85%, 100% 100%, 100% 0%);
+  background-color: #3a7220;
+  opacity: 0.6;
+}
+
+.advanteges__decoration:nth-of-type(2) {
+  bottom: -65px;
+  left: 20px;
+  width: calc(245 / 344 * 100%);
+  height: calc(560 / 344 * 100%);
+  clip-path: polygon(0 100%, 100% 10%, 30% 0%);
+  background-color: #5bd024;
+  opacity: 0.6;
+}
+
+.advanteges__card-line {
+  border-bottom: 2px solid var(--color-white);
+}
+
+.advanteges__card-title {
+  z-index: 0;
+  flex-grow: 1;
+}
+
+.advanteges__card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 0;
+  text-shadow: 1px 1px 1px var(--text-color);
+}

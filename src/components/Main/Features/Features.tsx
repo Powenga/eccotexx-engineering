@@ -11,7 +11,7 @@ const Features: FC = () => (
     <ul className={b('list')}>
       {features.map(({ id, text, accent }) => (
         <li key={id}>
-          <Text className={b('text')} type={TextType.advantages}>
+          <Text className={b('text')} type={TextType.features}>
             {text}
           </Text>
           <Text className={b('text')} type={TextType.title}>

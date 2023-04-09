@@ -18,12 +18,14 @@ export enum TextType {
   main = 'main',
   intro = 'intro',
   menu = 'menu',
-  advantages = 'advantages',
+  features = 'features',
   subtitle = 'subtitle',
   title = 'title',
   objectTitle = 'object-title',
   objectSubtitle = 'object-subtitle',
   objectParagraph = 'object-paragraph',
+  advantagesTitle = 'advantages-title',
+  advantagesContent = 'advantages-content',
 }
 
 export enum TextStyle {
