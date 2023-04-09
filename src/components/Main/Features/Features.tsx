@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import block from 'bem-css-modules';
-import styles from './Advantages.module.css';
-import { advantages } from './data';
+import styles from './Features.module.css';
+import { features } from './data';
 import Text, { TextType } from '../../Text/Text';
 
 const b = block(styles);
 
-const Advantages: FC = () => (
+const Features: FC = () => (
   <div className={b()}>
     <ul className={b('list')}>
-      {advantages.map(({ id, text, accent }) => (
+      {features.map(({ id, text, accent }) => (
         <li key={id}>
           <Text className={b('text')} type={TextType.advantages}>
             {text}
@@ -26,4 +26,4 @@ const Advantages: FC = () => (
   </div>
 );
 
-export default Advantages;
+export default Features;

@@ -1,7 +1,7 @@
 import block from 'bem-css-modules';
 import styles from './Main.module.css';
 import Intro from './Intro/Intro';
-import Advantages from './Advantages/Advantages';
+import Features from './Features/Features';
 import Products from './Products/Products';
 import Objects from './Objects/Objects';
 
@@ -13,7 +13,7 @@ const Main = () => (
       <Intro />
     </section>
     <section className={b('section', { type: 'wide' })}>
-      <Advantages />
+      <Features />
     </section>
     <section className={b('section')}>
       <Products />

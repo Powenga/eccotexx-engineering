@@ -1,4 +1,4 @@
-export const advantages = [
+export const features = [
   {
     id: 1,
     text: 'На рынке',

@@ -1,10 +1,10 @@
-.advantages {
+.features {
   background-color: var(--color-green);
   position: relative;
   overflow: hidden;
 }
 
-.advantages__list {
+.features__list {
   margin: 0 auto;
   padding: 50px 0;
   list-style: none;
@@ -17,18 +17,18 @@
   position: relative;
 }
 
-.advantages__text {
+.features__text {
   color: var(--color-white);
   margin: 0;
   text-align: center;
 }
 
-.advantages__decoration {
+.features__decoration {
   position: absolute;
   z-index: 0;
 }
 
-.advantages__decoration:first-of-type {
+.features__decoration:first-of-type {
   bottom: -288px;
   left: -170px;
   width: calc(915 / 1440 * 100%);
@@ -38,7 +38,7 @@
   clip-path: polygon(0 50%, 50% 100%, 100% 0);
 }
 
-.advantages__decoration:nth-of-type(2) {
+.features__decoration:nth-of-type(2) {
   bottom: -20px;
   right: 0;
   width: calc(738 / 1440 * 100%);
@@ -48,7 +48,7 @@
   clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
-.advantages__decoration:nth-of-type(3) {
+.features__decoration:nth-of-type(3) {
   bottom: -117px;
   right: -36px;
   width: calc(1044 / 1440 * 100%);
