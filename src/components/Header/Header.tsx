@@ -40,7 +40,7 @@ const Header: FC<Props> = ({ className = '' }) => (
             </li>
           ))}
         </ul>
-        <Button type={ButtonType.button}>
+        <Button type={ButtonType.button} onClick={() => {}}>
           <Text
             Tag={TextTag.span}
             type={TextType.menu}

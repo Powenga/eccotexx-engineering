@@ -1,0 +1,96 @@
+.callback {
+  display: block;
+}
+
+.callback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: calc(619 / 1258 * 100%);
+}
+
+.callback__label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.callback__input {
+  composes: text text_type_input from '../../Text/Text.module.css';
+  border: 2px solid var(--text-color);
+  border-radius: 0;
+  padding: 8px 16px;
+}
+
+.callback__input:focus {
+  outline: 2px solid var(--color-green);
+}
+
+.callback__input_state_error {
+  border: 2px solid var(--color-pink);
+}
+
+.callback__input-error {
+  top: calc(100% + 2px);
+  position: absolute;
+}
+
+.callback__textarea {
+  composes: callback__input;
+  resize: none;
+}
+
+.callback__textarea_state_error {
+  border: 2px solid var(--color-pink);
+}
+
+.callback__policy-wrap {
+  margin: 0 0 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.callback__policy-pseudo {
+  content: '';
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--text-color);
+  margin-right: 10px;
+}
+.callback__policy-input:focus-visible + .callback__policy-pseudo {
+  outline: 1px solid black;
+}
+
+.callback__policy-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.callback__policy-input:checked + .callback__policy-pseudo:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  background-color: var(--text-color);
+}
+
+.callback__policy-text {
+  vertical-align: super;
+}
+
+.callback__policy-link {
+  color: var(--color-green);
+}

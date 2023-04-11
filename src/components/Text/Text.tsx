@@ -27,6 +27,8 @@ export enum TextType {
   advantagesTitle = 'advantages-title',
   advantagesContent = 'advantages-content',
   accordionPreview = 'accordion-preview',
+  error = 'error',
+  input = 'input'
 }
 
 export enum TextStyle {
