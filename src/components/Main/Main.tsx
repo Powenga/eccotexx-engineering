@@ -8,6 +8,7 @@ import Objects from './Objects/Objects';
 import Advantages from './Advantages/Advantages';
 import Interaction from './Interaction/Interaction';
 import Callback from './Callback/Callback';
+import Contacts from './Contacts/Contacts';
 
 const b = block(styles);
 
@@ -48,6 +49,9 @@ const Main: FC<Props> = ({ onPolicyOpen, isSending, onSubmit }) => (
         isSending={isSending}
         onSubmit={onSubmit}
       />
+    </section>
+    <section className={b('section')}>
+      <Contacts />
     </section>
   </main>
 );

@@ -28,7 +28,10 @@ export enum TextType {
   advantagesContent = 'advantages-content',
   accordionPreview = 'accordion-preview',
   error = 'error',
-  input = 'input'
+  input = 'input',
+  contactsTitle = 'contacts-title',
+  contactsContent = 'contacts-content',
+  presentation = 'presentation',
 }
 
 export enum TextStyle {

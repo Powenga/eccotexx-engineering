@@ -86,6 +86,24 @@
   font-size: 20px;
   font-weight: 400;
 }
+.text_type_contacts-title {
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 400;
+  color: var(--color-green);
+  margin: 0;
+}
+.text_type_contacts-content {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+.text_type_presentation {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0;
+}
 
 /*Styles */
 .text_style_accent {

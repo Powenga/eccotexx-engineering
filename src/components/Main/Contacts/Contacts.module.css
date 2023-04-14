@@ -1,0 +1,63 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts__container {
+  width: calc(615 / 1258 * 100%);
+  margin-right: calc(20 / 1258 * 100%);
+}
+
+.contacts__presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.contacts__presentation::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 215px;
+  height: 100px;
+  background: center / cover no-repeat url('./pdf.svg');
+  opacity: 0.3;
+}
+
+.contacts__presentation-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.contacts__item-icon {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.contacts__link {
+  text-decoration: none;
+}
