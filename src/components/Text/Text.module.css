@@ -25,6 +25,14 @@
   font-weight: 400;
   color: var(--color-white);
   text-transform: uppercase;
+  margin: 0;
+}
+.text_type_features-accent {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 0;
 }
 .text_type_subtitle {
   font-size: 32px;

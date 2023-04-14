@@ -14,7 +14,7 @@ const Features: FC = () => (
           <Text className={b('text')} type={TextType.features}>
             {text}
           </Text>
-          <Text className={b('text')} type={TextType.title}>
+          <Text className={b('text')} type={TextType.featuresAccent}>
             {accent}
           </Text>
         </li>

@@ -19,6 +19,7 @@ export enum TextType {
   intro = 'intro',
   menu = 'menu',
   features = 'features',
+  featuresAccent = 'features-accent',
   subtitle = 'subtitle',
   title = 'title',
   objectTitle = 'object-title',
