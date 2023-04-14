@@ -4,13 +4,13 @@ import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import cn from 'classnames';
 import Text, { TextTag, TextType, TextWeight } from '../Text/Text';
-import menuItems from './menu-items';
 import logo from '../../images/logo.svg';
 import Button, { ButtonType } from '../Button/Button';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './Header.module.css';
 import slides from './slides/slides';
+import Menu from '../Menu/Menu';
 
 const b = block(styles);
 
@@ -24,22 +24,8 @@ const Header: FC<Props> = ({ className = '' }) => (
       <a href="/" className={b('logo-wrap')}>
         <img src={logo} alt="Логотип" className={b('logo')} />
       </a>
-      <nav className={b('nav')}>
-        <ul className={b('nav-list')}>
-          {menuItems.map(({ title, to }) => (
-            <li className={b('nav-item')} key={title}>
-              <a href={to} className={b('link')}>
-                <Text
-                  Tag={TextTag.span}
-                  type={TextType.menu}
-                  className={b('link-text')}
-                >
-                  {title}
-                </Text>
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className={b('menu')}>
+        <Menu />
         <Button type={ButtonType.button} onClick={() => {}}>
           <Text
             Tag={TextTag.span}
@@ -49,7 +35,7 @@ const Header: FC<Props> = ({ className = '' }) => (
             Напишите нам
           </Text>
         </Button>
-      </nav>
+      </div>
     </div>
     <Swiper
       className={b('slider')}

@@ -1,0 +1,5 @@
+.footer {
+  min-height: 770px;
+  box-sizing: border-box;
+  background-color: var(--color-green);
+}

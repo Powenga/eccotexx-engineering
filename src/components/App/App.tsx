@@ -29,7 +29,7 @@ const App: FC = () => {
         isSending={isSending}
         onSubmit={onSubmit}
       />
-      <Footer />
+      <Footer/>
     </div>
   );
 };
