@@ -33,6 +33,7 @@ export enum TextType {
   contactsTitle = 'contacts-title',
   contactsContent = 'contacts-content',
   presentation = 'presentation',
+  footerInfo = 'footer-info'
 }
 
 export enum TextStyle {

@@ -29,6 +29,6 @@
   color: var(--color-green);
 }
 
-.header__link-text {
+.menu__link-text {
   transition: 0.3s ease;
 }

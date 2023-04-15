@@ -112,6 +112,12 @@
   line-height: 100%;
   margin: 0;
 }
+.text_type_footer-info {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-white);
+}
 
 /*Styles */
 .text_style_accent {
