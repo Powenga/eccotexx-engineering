@@ -7,3 +7,15 @@
 .app__header {
   margin-bottom: 150px;
 }
+
+@media screen and (max-width: 1024px) {
+  .app__header {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .app__header {
+    margin-bottom: 50px;
+  }
+}

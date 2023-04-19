@@ -34,7 +34,11 @@ const Header: FC<Props> = ({ className = '', onMenuOpen }) => {
         </a>
         <div className={b('menu')}>
           <Navigation className={b('navigation')} />
-          <Button type={ButtonType.button} onClick={() => {}}>
+          <Button
+            type={ButtonType.button}
+            onClick={() => {}}
+            className={b('callback')}
+          >
             <Text
               Tag={TextTag.span}
               type={TextType.menu}

@@ -60,8 +60,8 @@
 }
 
 .header__slider {
-  position: absolute !important;
-  z-index: 0 !important;
+  position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   height: 100%;
@@ -77,10 +77,33 @@
 }
 
 @media screen and (max-width: 1360px) {
+  .header__logo-wrap {
+    flex-basis: 200px;
+    flex-shrink: 1;
+  }
   .header__navigation {
     display: none;
   }
   .header__aside-menu-button {
     display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    min-height: 50vh;
+  }
+  .header__callback {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__aside-menu-button {
+    width: 45px;
+  }
+
+  .header__aside-menu-button img {
+    width: 100%;
   }
 }

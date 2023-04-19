@@ -17,8 +17,7 @@
   color: #000 !important;
   position: relative;
   z-index: 101;
-  width: 100%;
-  max-width: 300px;
+  min-width: 300px;
   padding: 20px 0 0;
   box-shadow: -5px 0 80px #000;
   animation: slideIn 0.4s ease;
