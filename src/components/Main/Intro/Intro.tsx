@@ -28,7 +28,9 @@ const Intro: FC = () => (
         «ЛИРА-САПР».
       </Text>
     </div>
-    <img src={logo} alt="Логотип" className={b('logo')} />
+    <div className={b('logo-wrap')}>
+      <img src={logo} alt="Логотип" className={b('logo')} />
+    </div>
   </div>
 );
 

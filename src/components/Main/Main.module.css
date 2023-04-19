@@ -10,3 +10,15 @@
 .main__section_type_wide {
   width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+  .main__section {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main__section {
+    margin-bottom: 50px;
+  }
+}

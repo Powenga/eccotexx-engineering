@@ -88,7 +88,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--color-pink)
+  color: var(--color-pink);
 }
 .text_type_input {
   font-size: 20px;
@@ -162,6 +162,26 @@
 
 @media screen and (max-width: 1360px) {
   .text_type_menu {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 550px) {
+  .text_type_title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .text_type_intro {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .text_type_intro {
     font-size: 18px;
   }
 }
