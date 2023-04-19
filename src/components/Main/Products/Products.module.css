@@ -68,4 +68,24 @@
 
 .products__product-img {
   width: calc(300 / 1258 * 100%);
+  min-width: 200px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .products__advantages {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .products__product-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .products__advantages {
+    padding-left: 0;
+  }
 }
