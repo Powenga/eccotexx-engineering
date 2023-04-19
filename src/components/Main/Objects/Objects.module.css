@@ -110,3 +110,18 @@
   opacity: 0.05;
   clip-path: polygon(0 100%, 100% 0%, 40% 0);
 }
+
+@media screen and (max-width: 1360px) {
+  .objects__object-info {
+    width: 60%;
+  }
+  .objects__object-title {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .objects__object-title {
+    margin-bottom: 40px;
+  }
+}

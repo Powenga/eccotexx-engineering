@@ -2,7 +2,7 @@ import { FC } from 'react';
 import block from 'bem-css-modules';
 import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Text, { TextTag, TextType } from '../../Text/Text';
+import Text, { TextStyle, TextTag, TextType } from '../../Text/Text';
 import styles from './Objects.module.css';
 
 import 'swiper/css';
@@ -16,15 +16,38 @@ const Objects: FC = () => (
     <div className={b('inner')}>
       <div className={b('decoration')} />
       <div className={b('decoration')} />
-      <Text Tag={TextTag.h2} type={TextType.title} className={b('title')}>
+      <Text
+        Tag={TextTag.h2}
+        type={TextType.title}
+        className={b('title')}
+        style={TextStyle.white}
+      >
         Реализованные объекты
       </Text>
       <Swiper
         modules={[Pagination, A11y]}
-        slidesPerView={3}
-        spaceBetween={110}
+        slidesPerView={1}
+        spaceBetween={50}
         pagination={{ clickable: true }}
         wrapperClass={b('slider-wrap')}
+        breakpoints={{
+          1760: {
+            slidesPerView: 3,
+            spaceBetween: 180,
+          },
+          1360: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 100,
+          },
+          650: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+        }}
       >
         {objects.map(({ id, title, location, square, years }) => (
           <SwiperSlide key={id}>
