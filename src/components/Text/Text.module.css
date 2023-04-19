@@ -198,6 +198,9 @@
   .text_type_intro {
     font-size: 20px;
   }
+  .text_type_advantages-title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 425px) {

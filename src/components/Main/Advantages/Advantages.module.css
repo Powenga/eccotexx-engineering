@@ -68,3 +68,23 @@
   z-index: 0;
   text-shadow: 1px 1px 1px var(--text-color);
 }
+
+@media screen and (max-width: 1360px) {
+  .advanteges__card {
+    flex-basis: 30%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .advanteges__list {
+    flex-direction: column;
+  }
+  .advanteges__card {
+    min-height: 200px;
+    margin-bottom: 40px;
+    padding: 10px;
+  }
+  .advanteges__card:last-child {
+    margin-bottom: 0;
+  }
+}
