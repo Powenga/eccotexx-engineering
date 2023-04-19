@@ -10,7 +10,7 @@ const Features: FC = () => (
   <div className={b()}>
     <ul className={b('list')}>
       {features.map(({ id, text, accent }) => (
-        <li key={id}>
+        <li className={b('item')} key={id}>
           <Text className={b('text')} type={TextType.features}>
             {text}
           </Text>

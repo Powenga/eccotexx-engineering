@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.features__item {
+  flex-basis: calc(33% - 10px);
+}
+
 .features__text {
   text-align: center;
 }
@@ -54,4 +58,20 @@
   background-color: #71C848;
   opacity: 0.33;
   clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+@media screen and (max-width: 1024px) {
+  .features__list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .features__list {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .features__item {
+    margin-bottom: 40px;
+  }
 }
