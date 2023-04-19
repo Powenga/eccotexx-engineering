@@ -3,7 +3,7 @@ import block from 'bem-css-modules';
 import styles from './Callback.module.css';
 import Text, { TextStyle, TextTag, TextType } from '../../Text/Text';
 import useFormWithValidation from '../../../hooks/useForm';
-import { SPACE_KEY_CODE, ENTER_KEY_CODE } from '../../../utils/config';
+import { KeyboardKeys } from '../../../utils/config';
 import Button from '../../Button/Button';
 
 const b = block(styles);
@@ -48,7 +48,11 @@ const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
   };
 
   const handlePolicyKeydown = (event: KeyboardEvent<HTMLSpanElement>) => {
-    if (![SPACE_KEY_CODE, ENTER_KEY_CODE].includes(event.key)) {
+    if (
+      ![KeyboardKeys.enter, KeyboardKeys.space].includes(
+        event.key as KeyboardKeys
+      )
+    ) {
       return;
     }
     event.preventDefault();

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import block from 'bem-css-modules';
 import Text, { TextType } from '../Text/Text';
 import styles from './Footer.module.css';
-import Menu from '../Menu/Menu';
+import Navigation from '../Navigation/Navigation';
 import SkolkovoPath from './Skolkovo.png';
 
 const b = block(styles);
@@ -18,7 +18,7 @@ const Footer: FC<Props> = ({ className }) => (
     <div className={b('decoration')} />
     <div className={b('decoration')} />
     <div className={b('container')}>
-      <Menu className={b('menu')} />
+      <Navigation className={b('menu')} />
       <div className={b('info')}>
         <Text type={TextType.footerInfo}>
           ООО &quot;ЭКОТЕКС ИНЖИНИРИНГ&quot;

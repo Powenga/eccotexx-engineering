@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './Header.module.css';
 import slides from './slides/slides';
-import Menu from '../Menu/Menu';
+import Navigation from '../Navigation/Navigation';
 
 const b = block(styles);
 
@@ -25,7 +25,7 @@ const Header: FC<Props> = ({ className = '' }) => (
         <img src={logo} alt="Логотип" className={b('logo')} />
       </a>
       <div className={b('menu')}>
-        <Menu />
+        <Navigation />
         <Button type={ButtonType.button} onClick={() => {}}>
           <Text
             Tag={TextTag.span}

@@ -1,2 +1,7 @@
-export const ENTER_KEY_CODE = 'Enter';
-export const SPACE_KEY_CODE = ' ';
+export enum KeyboardKeys {
+  enter = 'Enter',
+  space = ' ',
+  esc = 'Escape',
+}
+
+export const MODAL_ROOT_SELECTOR = '#modal';

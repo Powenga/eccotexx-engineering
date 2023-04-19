@@ -9,8 +9,8 @@ import {
 } from 'react';
 import block from 'bem-css-modules';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ENTER_KEY_CODE, SPACE_KEY_CODE } from '../../../../utils/config';
 import styles from './Accordion.module.css';
+import { KeyboardKeys } from '../../../../utils/config';
 
 const b = block(styles);
 
@@ -33,7 +33,10 @@ const Accordion: FC<PropsWithChildren<Props>> = ({
 
   const keyDownHandler = useCallback(
     (event: KeyboardEvent<HTMLDivElement>) => {
-      if (event.key === SPACE_KEY_CODE || event.key === ENTER_KEY_CODE) {
+      if (
+        KeyboardKeys.enter === event.key ||
+        KeyboardKeys.space === event.key
+      ) {
         event.preventDefault();
         setIsOpen(!isOpen);
       }
