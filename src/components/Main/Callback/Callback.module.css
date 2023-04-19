@@ -94,3 +94,24 @@
 .callback__policy-link {
   color: var(--color-green);
 }
+
+@media screen and (max-width: 1360px) {
+  .callback__form {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .callback__form {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .callback__label {
+    margin-bottom: 20px;
+  }
+  .callback__policy-wrap {
+    margin-bottom: 30px;
+  }
+}
