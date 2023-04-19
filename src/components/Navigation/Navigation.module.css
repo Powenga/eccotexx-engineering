@@ -5,11 +5,12 @@
 .navigation__nav-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   list-style: none;
   margin: 0 25px 0 auto;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .navigation__nav-list_type_column {

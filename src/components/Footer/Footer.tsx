@@ -23,25 +23,23 @@ const Footer: FC<Props> = ({ className }) => (
         <Text type={TextType.footerInfo}>
           ООО &quot;ЭКОТЕКС ИНЖИНИРИНГ&quot;
         </Text>
-
         <Text type={TextType.footerInfo}>
-          399260, Липецкая область, Хлевенский район, с.п. Хлевенский сельсовет,
-          с. Хлевное, ул. Дорожная д. 1, оф. 2
+          Юридический адрес: 399260, Липецкая область, Хлевенский район, с.п.
+          Хлевенский сельсовет, с. Хлевное, ул. Дорожная д. 1, оф. 2
         </Text>
-
-        <a className={b('link')} href="tel:+74742783343">
-          <Text type={TextType.footerInfo}>+7 (4742) 783-343</Text>
-        </a>
-        <a className={b('link')} href="tel:+74742710509">
-          <Text type={TextType.footerInfo}>+7 (4742) 710-509</Text>
-        </a>
-        <a className={b('link')} href="tel:+79202405728">
-          <Text type={TextType.footerInfo}>+7 (920) 240-5728</Text>
-        </a>
-
+        <Text type={TextType.footerInfo}>ИНН: 4817006399</Text>
+        <Text type={TextType.footerInfo}>КПП: 481701001</Text>
+        <Text type={TextType.footerInfo}>ОГРН: 1214800010776</Text>
+        <Text type={TextType.footerInfo}>ОКПО: 48182818</Text>
+        <Text type={TextType.footerInfo}>ОКВЭД: 72.19</Text>
         <Text type={TextType.footerInfo}>
-          Генеральный директор: Пикалова Елена Алексеевна
+          Банк: Липецкое отделение № 8593 ПАО СБЕРБАНКА РОССИИ г. Липецка
         </Text>
+        <Text type={TextType.footerInfo}>к/с: 30101810800000000604</Text>
+        <Text type={TextType.footerInfo}>
+          р/с (рубль): 40702810535000003644
+        </Text>
+        <Text type={TextType.footerInfo}>БИК: 044206604</Text>
       </div>
       <a
         target="_blank"

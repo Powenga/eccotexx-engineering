@@ -113,9 +113,10 @@
   margin: 0;
 }
 .text_type_footer-info {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  margin: 0;
+  line-height: 120%;
+  margin: 0 0 6px;
   color: var(--color-white);
 }
 
@@ -166,6 +167,9 @@
   }
   .text_type_object-title {
     font-size: 28px;
+  }
+  .text_type_footer-info {
+    font-size: 16px;
   }
 }
 
