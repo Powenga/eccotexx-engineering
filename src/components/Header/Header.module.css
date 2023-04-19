@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-.header__menu {
+.header__menu-wrap {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -45,6 +45,20 @@
   align-items: center;
 }
 
+.header__aside-menu-button {
+  display: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.header__aside-menu-button:hover {
+  opacity: 0.6;
+}
+
 .header__slider {
   position: absolute !important;
   z-index: 0 !important;
@@ -60,4 +74,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
+}
+
+@media screen and (max-width: 1360px) {
+  .header__navigation {
+    display: none;
+  }
+  .header__aside-menu-button {
+    display: block;
+  }
 }

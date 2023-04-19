@@ -10,7 +10,7 @@ const b = block(styles);
 
 const App: FC = () => {
   const [isPolicyOpened, setIsPolicyOpened] = useState(false);
-  const [isMenuOpened, setIsMenuOpened] = useState(true);
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isSending, setIsSending] = useState(false);
 
   const closePolicy = () => {
@@ -25,12 +25,16 @@ const App: FC = () => {
     setIsMenuOpened(false);
   };
 
+  const openMenu = () => {
+    setIsMenuOpened(true);
+  };
+
   const onSubmit = () => {};
 
   return (
     <>
       <div className={b()}>
-        <Header className={b('header')} />
+        <Header onMenuOpen={openMenu} className={b('header')} />
         <Main
           onPolicyOpen={openPolicy}
           isSending={isSending}
