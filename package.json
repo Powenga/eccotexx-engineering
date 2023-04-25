@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "deploy": "npm run build && scp -r -O ./build/* eccotexx@eccotexx.beget.tech:/home/e/eccotexx/engineering.eccotexx.com/public_html"
   },
   "eslintConfig": {
     "extends": [

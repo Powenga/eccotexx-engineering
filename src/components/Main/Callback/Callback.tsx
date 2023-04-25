@@ -129,7 +129,7 @@ const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
             rows={TEXTAREA_ROWS}
             required
             minLength={5}
-            maxLength={40}
+            maxLength={500}
           />
           <Text
             Tag={TextTag.span}
