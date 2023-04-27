@@ -36,6 +36,7 @@ export enum TextType {
   footerInfo = 'footer-info',
   popupTitle = 'popup-title',
   popupContent = 'popup-content',
+  policyParagraph = 'policy-paragraph',
 }
 
 export enum TextStyle {

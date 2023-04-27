@@ -13,7 +13,7 @@ import Policy from '../PopupContent/PolicyContent';
 const b = block(styles);
 
 const App: FC = () => {
-  const [isPolicyOpened, setIsPolicyOpened] = useState(false);
+  const [isPolicyOpened, setIsPolicyOpened] = useState(true);
   const [isCallbackSuccess, setIsCallbackSuccess] = useState(false);
   const [isCallbackError, setIsCallbackError] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -73,7 +73,7 @@ const App: FC = () => {
         </Popup>
       )}
       {isPolicyOpened && (
-        <Popup onClose={closePolicy}>
+        <Popup onClose={closePolicy} type="policy">
           <Policy />
         </Popup>
       )}

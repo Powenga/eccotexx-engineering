@@ -10,9 +10,14 @@ const MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
 
 type Props = {
   onClose: () => void;
+  type?: 'policy';
 };
 
-const Popup: FC<PropsWithChildren<Props>> = ({ onClose, children }) => {
+const Popup: FC<PropsWithChildren<Props>> = ({
+  onClose,
+  type = undefined,
+  children,
+}) => {
   const handleCloseClick = (event: SyntheticEvent) => {
     event.preventDefault();
     onClose();
@@ -33,7 +38,7 @@ const Popup: FC<PropsWithChildren<Props>> = ({ onClose, children }) => {
     return createPortal(
       <div className={b()}>
         <ModalOverlay closeModal={onClose} />
-        <div className={b('wrap')}>
+        <div className={b('wrap', { type })}>
           <button
             className={b('close')}
             onClick={handleCloseClick}

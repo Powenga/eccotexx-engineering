@@ -24,6 +24,10 @@
   justify-content: flex-start;
 }
 
+.popup__wrap_type_policy {
+  min-width: 80%;
+}
+
 .popup__close {
   position: absolute;
   top: 15px;
@@ -49,4 +53,27 @@
 
 .popup__content::-webkit-scrollbar-thumb {
   background-color: #dddddd;
+}
+
+@media screen and (max-width: 1360px) {
+  .popup__wrap_type_policy {
+    padding: 50px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .popup__close {
+    top: 10px;
+    right: 10px;
+  }
+  .popup__wrap_type_policy {
+    padding: 40px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .popup__wrap_type_policy {
+    min-width: 90%;
+    padding: 40px 10px 10px;
+  }
 }

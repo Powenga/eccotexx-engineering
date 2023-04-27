@@ -9,9 +9,11 @@ const PolicyContent: FC = () => (
     </Text>
     {policy.map(({ title, content }) => (
       <Fragment key={title}>
-        <Text>{title}</Text>
+        <Text type={TextType.popupContent}>{title}</Text>
         {content.map((elem) => (
-          <Text key={elem}>{elem}</Text>
+          <Text key={elem} type={TextType.policyParagraph}>
+            {elem}
+          </Text>
         ))}
       </Fragment>
     ))}
