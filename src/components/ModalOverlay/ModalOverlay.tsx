@@ -1,4 +1,5 @@
 import { FC, SyntheticEvent, useRef } from 'react';
+import { useLockBodyScroll } from 'react-use';
 
 const style: Record<string, string | number> = {
   position: 'absolute',
@@ -16,6 +17,8 @@ type TModalOverlay = {
 
 const ModalOverlay: FC<TModalOverlay> = ({ closeModal }) => {
   const overlayRef = useRef(null);
+  
+  useLockBodyScroll(true);
 
   function handleClick(event: SyntheticEvent) {
     if (event.target === overlayRef.current) {
