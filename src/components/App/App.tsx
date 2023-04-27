@@ -13,9 +13,9 @@ import Policy from '../PopupContent/PolicyContent';
 const b = block(styles);
 
 const App: FC = () => {
-  const [isPolicyOpened, setIsPolicyOpened] = useState(true);
+  const [isPolicyOpened, setIsPolicyOpened] = useState(false);
   const [isCallbackSuccess, setIsCallbackSuccess] = useState(false);
-  const [isCallbackError, setIsCallbackError] = useState(false);
+  const [isCallbackError, setIsCallbackError] = useState(true);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   const closePolicy = () => {
@@ -68,7 +68,7 @@ const App: FC = () => {
         </Popup>
       )}
       {isCallbackError && (
-        <Popup onClose={closeCallbackErrorMessage}>
+        <Popup onClose={closeCallbackErrorMessage} styleModifier='error'>
           <ErrorMessage />
         </Popup>
       )}
