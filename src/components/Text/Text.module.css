@@ -250,6 +250,9 @@
   .text_type_advantages-title {
     font-size: 20px;
   }
+  .text_type_presentation {
+    font-weight: 400;
+  }
 }
 
 @media screen and (max-width: 425px) {
