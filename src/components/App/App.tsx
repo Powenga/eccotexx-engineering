@@ -14,7 +14,7 @@ const b = block(styles);
 
 const App: FC = () => {
   const [isPolicyOpened, setIsPolicyOpened] = useState(false);
-  const [isCallbackSuccess, setIsCallbackSuccess] = useState(true);
+  const [isCallbackSuccess, setIsCallbackSuccess] = useState(false);
   const [isCallbackError, setIsCallbackError] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
