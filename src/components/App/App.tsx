@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import block from 'bem-css-modules';
 import styles from './App.module.css';
 import Header from '../Header/Header';
@@ -17,6 +17,8 @@ const App: FC = () => {
   const [isCallbackSuccess, setIsCallbackSuccess] = useState(true);
   const [isCallbackError, setIsCallbackError] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  const callbackRef = useRef<HTMLElement>(null);
 
   const closePolicy = () => {
     setIsPolicyOpened(false);
@@ -50,11 +52,20 @@ const App: FC = () => {
     setIsCallbackError(false);
   };
 
+  const scrollToCallback = () => {
+    callbackRef.current?.scrollIntoView();
+  };
+
   return (
     <>
       <div className={b()}>
-        <Header onMenuOpen={openMenu} className={b('header')} />
+        <Header
+          onMenuOpen={openMenu}
+          className={b('header')}
+          onCallbackClick={scrollToCallback}
+        />
         <Main
+          ref={callbackRef}
           onPolicyClick={openPolicy}
           handleSuccessMessage={openCallbackSuccessMessage}
           handleErrorMessage={openCallbackErrorMessage}
@@ -68,7 +79,7 @@ const App: FC = () => {
         </Popup>
       )}
       {isCallbackError && (
-        <Popup onClose={closeCallbackErrorMessage} styleModifier='error'>
+        <Popup onClose={closeCallbackErrorMessage} styleModifier="error">
           <ErrorMessage />
         </Popup>
       )}

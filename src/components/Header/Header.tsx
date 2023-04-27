@@ -18,12 +18,20 @@ const b = block(styles);
 type Props = {
   className?: string;
   onMenuOpen: () => void;
+  onCallbackClick?: () => void;
 };
 
-const Header: FC<Props> = ({ className = '', onMenuOpen }) => {
+const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
   const handleMenuOpen = (event: SyntheticEvent) => {
     event.preventDefault();
     onMenuOpen();
+  };
+
+  const handleCallbackClick = (event: SyntheticEvent) => {
+    event.preventDefault();
+    if (onCallbackClick) {
+      onCallbackClick();
+    }
   };
 
   return (
@@ -36,7 +44,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen }) => {
           <Navigation className={b('navigation')} />
           <Button
             type={ButtonType.button}
-            onClick={() => {}}
+            onClick={handleCallbackClick}
             className={b('callback')}
           >
             <Text

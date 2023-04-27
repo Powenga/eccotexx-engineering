@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { forwardRef } from 'react';
 import block from 'bem-css-modules';
 import styles from './Main.module.css';
 import Intro from './Intro/Intro';
@@ -18,41 +18,39 @@ type Props = {
   onPolicyClick: () => void;
 };
 
-const Main: FC<Props> = ({
-  onPolicyClick,
-  handleSuccessMessage,
-  handleErrorMessage,
-}) => (
-  <main className={b()}>
-    <section className={b('section')}>
-      <Intro />
-    </section>
-    <section className={b('section', { type: 'wide' })}>
-      <Features />
-    </section>
-    <section className={b('section')}>
-      <Products />
-    </section>
-    <section className={b('section', { type: 'wide' })}>
-      <Objects />
-    </section>
-    <section className={b('section')}>
-      <Advantages />
-    </section>
-    <section className={b('section')}>
-      <Interaction />
-    </section>
-    <section className={b('section')}>
-      <Callback
-        onPolicyClick={onPolicyClick}
-        onSuccess={handleSuccessMessage}
-        onError={handleErrorMessage}
-      />
-    </section>
-    <section className={b('section')}>
-      <Contacts />
-    </section>
-  </main>
+const Main = forwardRef<HTMLElement, Props>(
+  ({ onPolicyClick, handleSuccessMessage, handleErrorMessage }, ref) => (
+    <main className={b()}>
+      <section id="company" className={b('section')}>
+        <Intro />
+      </section>
+      <section className={b('section', { type: 'wide' })}>
+        <Features />
+      </section>
+      <section id="products" className={b('section')}>
+        <Products />
+      </section>
+      <section id="objects" className={b('section', { type: 'wide' })}>
+        <Objects />
+      </section>
+      <section id="advantages" className={b('section')}>
+        <Advantages />
+      </section>
+      <section id="cooperation" className={b('section')}>
+        <Interaction />
+      </section>
+      <section ref={ref} className={b('section')}>
+        <Callback
+          onPolicyClick={onPolicyClick}
+          onSuccess={handleSuccessMessage}
+          onError={handleErrorMessage}
+        />
+      </section>
+      <section id="contacts" className={b('section')}>
+        <Contacts />
+      </section>
+    </main>
+  )
 );
 
 export default Main;

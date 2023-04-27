@@ -7,13 +7,14 @@ export default [
     title: 'Продукция',
     to: '#products',
   },
-  {
-    title: 'Преимущества',
-    to: '#advantages',
-  },
+
   {
     title: 'Объекты',
     to: '#objects',
+  },
+  {
+    title: 'Преимущества',
+    to: '#advantages',
   },
   {
     title: 'Взаимодействие',
@@ -23,4 +24,4 @@ export default [
     title: 'Контакты',
     to: '#contacts',
   },
-]
+];
