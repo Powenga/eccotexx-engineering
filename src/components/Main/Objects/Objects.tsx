@@ -50,7 +50,7 @@ const Objects: FC = () => (
         }}
       >
         {objects.map(({ id, title, location, square, years }) => (
-          <SwiperSlide key={id}>
+          <SwiperSlide key={id} style={{height: 'auto'}}>
             <div className={b('object')}>
               <div className={b('object-decoration')} />
               <div className={b('object-decoration')} />
@@ -77,7 +77,7 @@ const Objects: FC = () => (
                 <Text Tag={TextTag.p} type={TextType.objectSubtitle}>
                   Год выполнения:{' '}
                 </Text>
-                <Text Tag={TextTag.p} type={TextType.objectParagraph}>
+                <Text Tag={TextTag.p} type={TextType.objectParagraph} className={b('object-year')}>
                   {years}
                 </Text>
               </div>

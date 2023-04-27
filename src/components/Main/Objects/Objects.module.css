@@ -42,6 +42,8 @@
   position: relative;
   overflow: hidden;
   cursor: grab;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .objects__object:active {
@@ -55,10 +57,14 @@
 }
 
 .objects__object-info {
-  margin: 0;
+  margin: auto 0 0;
   align-self: flex-end;
-  width: 50%;
+  min-width: 50%;
   position: relative;
+}
+
+.objects__object-year {
+  margin-bottom: 0;
 }
 
 .objects__decoration {
@@ -112,9 +118,6 @@
 }
 
 @media screen and (max-width: 1360px) {
-  .objects__object-info {
-    width: 60%;
-  }
   .objects__object-title {
     margin-bottom: 60px;
   }

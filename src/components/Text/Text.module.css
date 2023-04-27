@@ -44,6 +44,7 @@
   text-transform: uppercase;
   margin: 0 0 50px;
 }
+/** Objects */
 .text_type_object-title {
   font-size: 32px;
   line-height: 120%;
@@ -52,15 +53,16 @@
 .text_type_object-subtitle {
   font-size: 18px;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 100%;
   margin: 0;
 }
 .text_type_object-paragraph {
   font-size: 24px;
   font-weight: 400;
   line-height: 110%;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
+
 .text_type_advantages-title {
   font-size: 24px;
   font-weight: 700;
