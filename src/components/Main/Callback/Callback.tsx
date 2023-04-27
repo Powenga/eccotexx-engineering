@@ -1,23 +1,19 @@
-import { FC, KeyboardEvent, SyntheticEvent, useRef } from 'react';
+import { FC, KeyboardEvent, SyntheticEvent, useRef, useState } from 'react';
 import block from 'bem-css-modules';
 import styles from './Callback.module.css';
 import Text, { TextStyle, TextTag, TextType } from '../../Text/Text';
 import useFormWithValidation from '../../../hooks/useForm';
 import { KeyboardKeys } from '../../../utils/config';
 import Button from '../../Button/Button';
+import api from '../../../utils/api';
 
 const b = block(styles);
 const TEXTAREA_ROWS = 5;
 
 type Props = {
-  onSubmit: (dataForm: {
-    userName: string;
-    userEmail: string;
-    userMessage: string;
-    policy: boolean;
-  }) => void;
-  isSending: boolean;
   onPolicyClick: () => void;
+  onSuccess: () => void;
+  onError: () => void;
 };
 
 enum InputNames {
@@ -27,9 +23,11 @@ enum InputNames {
   policy = 'policy',
 }
 
-const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
+const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
   const formRef = useRef(null);
   const form = useFormWithValidation(formRef);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (evt: React.FormEvent): void => {
     evt.preventDefault();
@@ -43,8 +41,19 @@ const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
       ...form.checkboxValues,
     };
 
-    onSubmit(dataForm);
-    form.resetForm();
+    setIsLoading(true);
+    api
+      .sendCallbackQuery(dataForm)
+      .then(() => {
+        onSuccess();
+        form.resetForm();
+      })
+      .catch(() => {
+        onError();
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const handlePolicyKeydown = (event: KeyboardEvent<HTMLSpanElement>) => {
@@ -70,6 +79,7 @@ const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
         Форма обратной связи
       </Text>
       <form ref={formRef} noValidate className={b('form')}>
+        {isLoading && <div className={b('preloader')} />}
         <label htmlFor={InputNames.userName} className={b('label')}>
           <input
             id={InputNames.userName}
@@ -167,12 +177,11 @@ const Callback: FC<Props> = ({ onSubmit, onPolicyClick, isSending }) => {
             </span>
           </Text>
         </label>
-        <Button onClick={handleSubmit} disabled={!form.isValid}>
+        <Button onClick={handleSubmit} disabled={!form.isValid || isLoading}>
           <Text Tag={TextTag.span} type={TextType.menu}>
             ОТПРАВИТЬ
           </Text>
         </Button>
-        {isSending}
       </form>
     </div>
   );

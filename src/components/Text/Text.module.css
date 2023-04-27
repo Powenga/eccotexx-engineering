@@ -119,6 +119,18 @@
   margin: 0 0 6px;
   color: var(--color-white);
 }
+.text_type_popup-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin:  0 0 50px;
+  color: var(--color-white);
+}
+.text_type_popup-content {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 50px 0 0;
+  color: var(--color-white);
+}
 
 /*Styles */
 .text_style_accent {

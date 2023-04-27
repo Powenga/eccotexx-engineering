@@ -4,14 +4,19 @@ import styles from './App.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
-import Menu from '../Main/Menu/Menu';
+import Menu from '../Menu/Menu';
+import Popup from '../Popup/Popup';
+import SuccessMessage from '../PopupContent/SuccessMessage';
+import ErrorMessage from '../PopupContent/ErrorMessage';
+import Policy from '../PopupContent/PolicyContent';
 
 const b = block(styles);
 
 const App: FC = () => {
   const [isPolicyOpened, setIsPolicyOpened] = useState(false);
+  const [isCallbackSuccess, setIsCallbackSuccess] = useState(false);
+  const [isCallbackError, setIsCallbackError] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [isSending, setIsSending] = useState(false);
 
   const closePolicy = () => {
     setIsPolicyOpened(false);
@@ -29,20 +34,49 @@ const App: FC = () => {
     setIsMenuOpened(true);
   };
 
-  const onSubmit = () => {};
+  const openCallbackSuccessMessage = () => {
+    setIsCallbackSuccess(true);
+  };
+
+  const closeCallbackSuccessMessage = () => {
+    setIsCallbackSuccess(false);
+  };
+
+  const openCallbackErrorMessage = () => {
+    setIsCallbackError(true);
+  };
+
+  const closeCallbackErrorMessage = () => {
+    setIsCallbackError(false);
+  };
 
   return (
     <>
       <div className={b()}>
         <Header onMenuOpen={openMenu} className={b('header')} />
         <Main
-          onPolicyOpen={openPolicy}
-          isSending={isSending}
-          onSubmit={onSubmit}
+          onPolicyClick={openPolicy}
+          handleSuccessMessage={openCallbackSuccessMessage}
+          handleErrorMessage={openCallbackErrorMessage}
         />
         <Footer />
       </div>
       {isMenuOpened && <Menu onClose={closeMenu} />}
+      {isCallbackSuccess && (
+        <Popup onClose={closeCallbackSuccessMessage}>
+          <SuccessMessage />
+        </Popup>
+      )}
+      {isCallbackError && (
+        <Popup onClose={closeCallbackErrorMessage}>
+          <ErrorMessage />
+        </Popup>
+      )}
+      {isPolicyOpened && (
+        <Popup onClose={closePolicy}>
+          <Policy />
+        </Popup>
+      )}
     </>
   );
 };

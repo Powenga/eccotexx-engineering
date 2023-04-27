@@ -13,17 +13,16 @@ import Contacts from './Contacts/Contacts';
 const b = block(styles);
 
 type Props = {
-  onSubmit: (dataForm: {
-    userName: string;
-    userEmail: string;
-    userMessage: string;
-    policy: boolean;
-  }) => void;
-  isSending: boolean;
-  onPolicyOpen: () => void;
+  handleSuccessMessage: () => void;
+  handleErrorMessage: () => void;
+  onPolicyClick: () => void;
 };
 
-const Main: FC<Props> = ({ onPolicyOpen, isSending, onSubmit }) => (
+const Main: FC<Props> = ({
+  onPolicyClick,
+  handleSuccessMessage,
+  handleErrorMessage,
+}) => (
   <main className={b()}>
     <section className={b('section')}>
       <Intro />
@@ -45,9 +44,9 @@ const Main: FC<Props> = ({ onPolicyOpen, isSending, onSubmit }) => (
     </section>
     <section className={b('section')}>
       <Callback
-        onPolicyClick={onPolicyOpen}
-        isSending={isSending}
-        onSubmit={onSubmit}
+        onPolicyClick={onPolicyClick}
+        onSuccess={handleSuccessMessage}
+        onError={handleErrorMessage}
       />
     </section>
     <section className={b('section')}>

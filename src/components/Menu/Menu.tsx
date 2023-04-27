@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
-import Navigation, { NavigationType } from '../../Navigation/Navigation';
+import Navigation, { NavigationType } from '../Navigation/Navigation';
 import styles from './Menu.module.css';
-import ModalOverlay from '../../ModalOverlay/ModalOverlay';
-import { KeyboardKeys, MODAL_ROOT_SELECTOR } from '../../../utils/config';
+import ModalOverlay from '../ModalOverlay/ModalOverlay';
+import { KeyboardKeys, MODAL_ROOT_SELECTOR } from '../../utils/config';
 
 const b = block(styles);
 
