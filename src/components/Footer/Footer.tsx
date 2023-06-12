@@ -9,10 +9,11 @@ import SkolkovoPath from './Skolkovo.png';
 const b = block(styles);
 
 type Props = {
+  onPolicyClick: () => void;
   className?: string;
 };
 
-const Footer: FC<Props> = ({ className }) => (
+const Footer: FC<Props> = ({ onPolicyClick, className }) => (
   <footer className={cn(b(), className)}>
     <div className={b('decoration')} />
     <div className={b('decoration')} />
@@ -41,6 +42,9 @@ const Footer: FC<Props> = ({ className }) => (
         </Text>
         <Text type={TextType.footerInfo}>БИК: 044206604</Text>
       </div>
+      <button type="button" className={b('button')} onClick={onPolicyClick}>
+        <Text type={TextType.footerPolicy}>Политика конфеденциальности</Text>
+      </button>
       <a
         target="_blank"
         rel="noopener noreferrer"

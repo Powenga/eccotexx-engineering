@@ -34,6 +34,7 @@ export enum TextType {
   contactsContent = 'contacts-content',
   presentation = 'presentation',
   footerInfo = 'footer-info',
+  footerPolicy = 'footer-policy',
   popupTitle = 'popup-title',
   popupContent = 'popup-content',
   policyParagraph = 'policy-paragraph',

@@ -70,7 +70,7 @@ const App: FC = () => {
           handleSuccessMessage={openCallbackSuccessMessage}
           handleErrorMessage={openCallbackErrorMessage}
         />
-        <Footer />
+        <Footer onPolicyClick={openPolicy} />
       </div>
       {isMenuOpened && <Menu onClose={closeMenu} />}
       {isCallbackSuccess && (
