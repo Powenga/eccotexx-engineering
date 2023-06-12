@@ -23,7 +23,7 @@
   justify-content: flex-start;
   align-items: center;
   width: calc(1360 / 1440 * 100%);
-  min-height: 90px;
+  min-height: 110px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
