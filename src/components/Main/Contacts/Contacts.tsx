@@ -46,7 +46,7 @@ const Contacts: FC = () => {
       </div>
       <a
         target="_blank"
-        href="/eccotexx_presentation.pdf"
+        href="/eccotexx_presentation_ru.pdf"
         className={b('presentation')}
       >
         <img src={frameSrc} alt="Презентация компании" />
