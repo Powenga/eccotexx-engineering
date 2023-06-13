@@ -3,6 +3,7 @@ import block from 'bem-css-modules';
 import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import cn from 'classnames';
+import { useTranslation } from 'react-i18next';
 import Text, { TextTag, TextType, TextWeight } from '../Text/Text';
 import logo from '../../images/logo-white.svg';
 import Button, { ButtonType } from '../Button/Button';
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
+  const { t } = useTranslation();
   const handleMenuOpen = (event: SyntheticEvent) => {
     event.preventDefault();
     onMenuOpen();
@@ -52,7 +54,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
               type={TextType.menu}
               weight={TextWeight.bold}
             >
-              Напишите нам
+              {t('writeUs')}
             </Text>
           </Button>
           <button onClick={handleMenuOpen} className={b('aside-menu-button')}>

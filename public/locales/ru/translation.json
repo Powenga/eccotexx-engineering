@@ -1,0 +1,13 @@
+{
+  "appTitle": "Экотекс Инжиниринг",
+  "appDescription": "Экотекс Инжиниринг",
+  "writeUs": "Напишите нам",
+  "navigation": [
+    { "id": "company", "content": "Компания", "to": "#company" },
+    { "id": "products", "content": "Продукция", "to": "#products" },
+    { "id": "objects", "content": "Объекты", "to": "#objects" },
+    { "id": "advantages", "content": "Преимущества", "to": "#advantages" },
+    { "id": "cooperation", "content": "Взаимодействие", "to": "#cooperation" },
+    { "id": "contacts", "content": "Контакты", "to": "#contacts" }
+  ]
+}

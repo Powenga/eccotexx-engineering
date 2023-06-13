@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from 'react';
+import { FC, Suspense, useRef, useState } from 'react';
 import block from 'bem-css-modules';
 import styles from './App.module.css';
 import Header from '../Header/Header';
@@ -57,7 +57,7 @@ const App: FC = () => {
   };
 
   return (
-    <>
+    <Suspense>
       <div className={b()}>
         <Header
           onMenuOpen={openMenu}
@@ -88,7 +88,7 @@ const App: FC = () => {
           <Policy />
         </Popup>
       )}
-    </>
+    </Suspense>
   );
 };
 
