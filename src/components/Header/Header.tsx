@@ -39,7 +39,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
     <header className={cn(b(), className)}>
       <div className={b('menu-wrap')}>
         <a href="/" className={b('logo-wrap')}>
-          <img src={logo} alt="Логотип" className={b('logo')} />
+          <img src={logo} alt={t('headerLogoAlt')} className={b('logo')} />
         </a>
         <div className={b('menu')}>
           <Navigation className={b('navigation')} />
@@ -57,7 +57,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
             </Text>
           </Button>
           <button onClick={handleMenuOpen} className={b('aside-menu-button')}>
-            <img src={buttonPath} alt="Открыть меню" />
+            <img src={buttonPath} alt={t('headerMenuButtonLabel')} />
           </button>
         </div>
       </div>

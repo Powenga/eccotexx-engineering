@@ -2,6 +2,8 @@
   "appTitle": "Экотекс Инжиниринг",
   "appDescription": "Экотекс Инжиниринг",
   "writeUs": "Напишите нам",
+  "headerLogoAlt": "Логотип",
+  "headerMenuButtonLabel": "Открыть меню",
   "navigation": [
     { "id": "company", "content": "Компания", "to": "#company" },
     { "id": "products", "content": "Продукция", "to": "#products" },
