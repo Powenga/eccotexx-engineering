@@ -13,9 +13,9 @@
     { "id": "contacts", "content": "Контакты", "to": "#contacts" }
   ],
   "slides": [
-    { "id": 1, "alt": "Фибра Экотекс", "path": "/slider/slide1.jpg" },
-    { "id": 2, "alt": "Фибра Экотекс", "path": "/slider/slide2.jpg" },
-    { "id": 3, "alt": "Фибра Экотекс", "path": "/slider/slide3.jpg" }
+    { "id": 1, "alt": "Фибра Экотекс" },
+    { "id": 2, "alt": "Фибра Экотекс" },
+    { "id": 3, "alt": "Фибра Экотекс" }
   ],
   "intro": {
     "title": "ECCOTEXX ENGINEERING",
