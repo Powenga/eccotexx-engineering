@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import styles from './Header.module.css';
 import Navigation from '../Navigation/Navigation';
 import buttonPath from './button.svg';
+import { slidesImages } from './slides/images';
 
 const b = block(styles);
 
@@ -67,9 +68,13 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
         slidesPerView={1}
         pagination={{ clickable: true }}
       >
-        {t('slides', { returnObjects: true }).map(({ id, path, alt }) => (
+        {t('slides', { returnObjects: true }).map(({ id, alt }) => (
           <SwiperSlide key={id}>
-            <img src={path} alt={alt} className={b('slider-image')} />
+            <img
+              src={slidesImages.find((image) => image.id === id)?.src}
+              alt={alt}
+              className={b('slider-image')}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
