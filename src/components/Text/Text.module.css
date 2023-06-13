@@ -121,6 +121,19 @@
   margin: 0 0 6px;
   color: var(--color-white);
 }
+.text_type_footer-policy {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0 0 6px;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.text_type_footer-policy:hover {
+  opacity: 0.8;
+}
+
 /** Popup & policy*/
 .text_type_popup-title {
   font-size: 32px;
@@ -252,6 +265,9 @@
   }
   .text_type_presentation {
     font-weight: 400;
+  }
+  .text_type_footer-policy {
+    font-size: 20px;
   }
 }
 

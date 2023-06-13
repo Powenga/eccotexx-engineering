@@ -1,13 +1,13 @@
 export const features = [
   {
     id: 1,
-    text: 'На рынке',
-    accent: 'c 2011 года',
+    text: 'Работаем',
+    accent: 'по\u00A0всему\u00A0миру',
   },
   {
     id: 2,
     text: 'Площадь объектов ',
-    accent: '850 тыс. м²',
+    accent: '850 тыс.\u00A0м²',
   },
   {
     id: 3,

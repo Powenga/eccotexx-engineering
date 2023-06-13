@@ -9,7 +9,7 @@
 }
 
 .footer__container {
-  min-height: 650px;
+  min-height: 700px;
   box-sizing: border-box;
   margin: 0 auto;
   width: calc(1360 / 1440 * 100%);
@@ -72,6 +72,11 @@
   background-color: #61c333;
   opacity: 0.8;
   clip-path: polygon(0 100%, 100% 60%, 100% 0);
+}
+
+.footer__button {
+  background: none;
+  border: none;
 }
 
 @media screen and (max-width: 768px) {

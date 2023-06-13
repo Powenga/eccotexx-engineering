@@ -15,10 +15,10 @@ const Intro: FC = () => (
         style={TextStyle.accent}
         className={b('title')}
       >
-        ECCOTEXX
+        ECCOTEXX ENGINEERING
       </Text>
       <Text type={TextType.intro} className={b('paragraph')}>
-        EccoTexx - научно-производственная компания, специализирующаяся на
+        EccoTexx Engineering - научно-производственная компания, специализирующаяся на
         разработке, производстве и внедрении композитных армирующих материалов
         для применения в бетонных конструкциях.
       </Text>
