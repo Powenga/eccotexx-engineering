@@ -11,7 +11,7 @@ i18next
     fallbackLng: 'ru',
     interpolation: {
       escapeValue: false,
-    },
+    }
   });
 
 export default i18next;
