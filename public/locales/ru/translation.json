@@ -263,5 +263,31 @@
     "userMessage": "Ваше сообщение",
     "policy": "Я согласен с <1>Политикой конфеденциальности</1>",
     "send": "ОТПРАВИТЬ"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "entities": [
+      {
+        "id": "1",
+        "title": "Телефон",
+        "content": "+7 (920) 519-23-20",
+        "link": "tel:+7 (920) 519-23-20"
+      },
+      {
+        "id": "2",
+        "title": "E-mail",
+        "content": "info@eccotexx-eng.com",
+        "link": "mailto:info@eccotexx-eng.com"
+      },
+      {
+        "id": "3",
+        "title": "Генеральный директор",
+        "content": "Пикалова Елена Алексеевна"
+      }
+    ],
+    "presentation": {
+      "title": "Презентация компании",
+      "link": "/eccotexx_presentation_ru.pdf"
+    }
   }
 }
