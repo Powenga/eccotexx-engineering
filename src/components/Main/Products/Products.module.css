@@ -30,16 +30,8 @@
   margin: 0 0 10px;
 }
 
-.products__accept {
-  color: var(--color-green);
-}
-
 .products__product-content {
   margin: 0 0 20px;
-}
-
-.products__product-accent {
-  color: var(--color-green);
 }
 
 .products__advantages {

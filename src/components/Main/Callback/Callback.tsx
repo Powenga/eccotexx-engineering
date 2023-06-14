@@ -1,5 +1,6 @@
 import { FC, KeyboardEvent, SyntheticEvent, useRef, useState } from 'react';
 import block from 'bem-css-modules';
+import { Trans, useTranslation } from 'react-i18next';
 import styles from './Callback.module.css';
 import Text, { TextStyle, TextTag, TextType } from '../../Text/Text';
 import useFormWithValidation from '../../../hooks/useForm';
@@ -24,6 +25,7 @@ enum InputNames {
 }
 
 const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
+  const { t } = useTranslation('translation', { keyPrefix: 'callback' });
   const formRef = useRef(null);
   const form = useFormWithValidation(formRef);
 
@@ -76,7 +78,7 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
   return (
     <div className={b()}>
       <Text Tag={TextTag.h2} type={TextType.title} style={TextStyle.accent}>
-        Форма обратной связи
+        {t('title')}
       </Text>
       <form ref={formRef} noValidate className={b('form')}>
         {isLoading && <div className={b('preloader')} />}
@@ -90,7 +92,7 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
               state: form.errors[InputNames.userName] ? 'error' : undefined,
             })}
             onChange={form.handleInputChange}
-            placeholder="Ваше имя"
+            placeholder={t('userName')}
             minLength={2}
             maxLength={40}
             required
@@ -114,7 +116,7 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
               state: form.errors[InputNames.userEmail] ? 'error' : undefined,
             })}
             onChange={form.handleInputChange}
-            placeholder="Ваша электронная почта"
+            placeholder={t('userEmail')}
             required
           />
           <Text
@@ -135,7 +137,7 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
               state: form.errors[InputNames.userMessage] ? 'error' : undefined,
             })}
             onChange={form.handleInputChange}
-            placeholder="Ваше сообщение"
+            placeholder={t('userMessage')}
             rows={TEXTAREA_ROWS}
             required
             minLength={5}
@@ -165,21 +167,23 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
             className={b('policy-pseudo')}
           />
           <Text Tag={TextTag.span} className={b('policy-text')}>
-            Я согласен с{' '}
-            <span
-              onClick={handlePolicyClick}
-              onKeyDown={(event) => handlePolicyKeydown(event)}
-              tabIndex={0}
-              role="button"
-              className={b('policy-link')}
-            >
-              Политикой конфеденциальности
-            </span>
+            <Trans i18nKey="callback.policy">
+              {'Я согласен с '}
+              <span
+                onClick={handlePolicyClick}
+                onKeyDown={(event) => handlePolicyKeydown(event)}
+                tabIndex={0}
+                role="button"
+                className={b('policy-link')}
+              >
+                Политикой конфеденциальности
+              </span>
+            </Trans>
           </Text>
         </label>
         <Button onClick={handleSubmit} disabled={!form.isValid || isLoading}>
           <Text Tag={TextTag.span} type={TextType.menu}>
-            ОТПРАВИТЬ
+            {t('send')}
           </Text>
         </Button>
       </form>
