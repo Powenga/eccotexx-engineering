@@ -162,10 +162,7 @@ const Callback: FC<Props> = ({ onPolicyClick, onSuccess, onError }) => {
             onChange={form.handleCheckboxChange}
             required
           />
-          <span
-            aria-label="Политика конфиденциальности"
-            className={b('policy-pseudo')}
-          />
+          <span aria-label={t('policyTitle')} className={b('policy-pseudo')} />
           <Text Tag={TextTag.span} className={b('policy-text')}>
             <Trans i18nKey="callback.policy">
               {'Я согласен с '}

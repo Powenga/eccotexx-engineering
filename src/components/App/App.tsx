@@ -13,6 +13,7 @@ import ErrorMessage from '../PopupContent/ErrorMessage';
 import Policy from '../PopupContent/PolicyContent';
 import { checkLocalStorage } from '../../utils/utils';
 import { COOKIE_LOCAL_STORAGE_KEY } from '../../utils/config';
+import CookieNotification from '../CookieNotification/CookieNotification';
 
 const b = block(styles);
 
@@ -119,7 +120,12 @@ const App: FC = () => {
             <Policy />
           </Popup>
         )}
-        {shouldCookieShow && <p>fadsjflkaskfjalkjd</p>}
+        {shouldCookieShow && (
+          <CookieNotification
+            onPolicyClick={openPolicy}
+            onConsent={consentCookie}
+          />
+        )}
       </Suspense>
     </HelmetProvider>
   );

@@ -26,6 +26,7 @@ const LanguageSelector: FC<Props> = ({ type = undefined, className }) => {
         {langs.map(({ key, nativeName }) => (
           <li key={key} className={b('item')}>
             <button
+              type="button"
               onClick={(event) => {
                 event.preventDefault();
                 i18n.changeLanguage(key);
