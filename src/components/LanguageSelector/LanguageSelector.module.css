@@ -38,3 +38,11 @@
   cursor: inherit;
   color: var(--color-white);
 }
+
+.lang-selector_type_row .lang-selector__list {
+  flex-direction: row;
+}
+
+.lang-selector_type_row .lang-selector__item {
+  margin: 0 5px;
+}

@@ -58,7 +58,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
               {t('writeUs')}
             </Text>
           </Button>
-          <LanguageSelector />
+          <LanguageSelector className={b('lang-sel')} />
           <button onClick={handleMenuOpen} className={b('aside-menu-button')}>
             <img src={buttonPath} alt={t('headerMenuButtonLabel')} />
           </button>

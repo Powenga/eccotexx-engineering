@@ -103,6 +103,9 @@
   .header__callback {
     display: none;
   }
+  .header__lang-sel {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {

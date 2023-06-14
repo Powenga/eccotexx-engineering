@@ -5,6 +5,9 @@ import Navigation, { NavigationType } from '../Navigation/Navigation';
 import styles from './Menu.module.css';
 import ModalOverlay from '../ModalOverlay/ModalOverlay';
 import { KeyboardKeys, MODAL_ROOT_SELECTOR } from '../../utils/config';
+import LanguageSelector, {
+  LanguageSelectorTypes,
+} from '../LanguageSelector/LanguageSelector';
 
 const b = block(styles);
 
@@ -28,6 +31,10 @@ const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className={b()}>
         <div className={b('container')}>
           <Navigation onClick={onClose} type={NavigationType.column} />
+          <LanguageSelector
+            className={b('lang-sel')}
+            type={LanguageSelectorTypes.row}
+          />
         </div>
         <ModalOverlay closeModal={onClose} />
       </div>,

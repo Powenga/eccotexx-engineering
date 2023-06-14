@@ -14,13 +14,20 @@
 
 .menu__container {
   background-color: var(--color-green);
-  color: #000 !important;
   position: relative;
   z-index: 101;
   min-width: 300px;
-  padding: 20px 0 0;
+  padding: 20px 0;
   box-shadow: -5px 0 80px #000;
   animation: slideIn 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.menu__lang-sel {
+  margin: auto 20px 0 0;
 }
 
 @keyframes slideIn {
