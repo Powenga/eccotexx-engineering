@@ -15,3 +15,5 @@ export const langs = [
   { key: LangKey.en, nativeName: LangNativeName.en },
   { key: LangKey.ru, nativeName: LangNativeName.ru },
 ];
+
+export const COOKIE_LOCAL_STORAGE_KEY = 'cookie-consent';
