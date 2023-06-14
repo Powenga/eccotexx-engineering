@@ -134,6 +134,14 @@
   opacity: 0.8;
 }
 
+.text_type_lang {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  color: inherit;
+}
+
 /** Popup & policy*/
 .text_type_popup-title {
   font-size: 32px;

@@ -45,6 +45,10 @@
   align-items: center;
 }
 
+.header__callback {
+  margin: 0 25px;
+}
+
 .header__aside-menu-button {
   display: none;
   border: 0;
@@ -86,6 +90,9 @@
   }
   .header__aside-menu-button {
     display: block;
+  }
+  .header__callback {
+    margin: 0 20px;
   }
 }
 

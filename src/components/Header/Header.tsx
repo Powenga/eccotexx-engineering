@@ -13,6 +13,7 @@ import styles from './Header.module.css';
 import Navigation from '../Navigation/Navigation';
 import buttonPath from './button.svg';
 import { slidesImages } from './slides/images';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const b = block(styles);
 
@@ -57,6 +58,7 @@ const Header: FC<Props> = ({ className = '', onMenuOpen, onCallbackClick }) => {
               {t('writeUs')}
             </Text>
           </Button>
+          <LanguageSelector />
           <button onClick={handleMenuOpen} className={b('aside-menu-button')}>
             <img src={buttonPath} alt={t('headerMenuButtonLabel')} />
           </button>

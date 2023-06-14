@@ -38,6 +38,7 @@ export enum TextType {
   popupTitle = 'popup-title',
   popupContent = 'popup-content',
   policyParagraph = 'policy-paragraph',
+  lang = 'lang',
 }
 
 export enum TextStyle {
