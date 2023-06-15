@@ -395,14 +395,8 @@
       {
         "title": "6. Purposes of personal data processing",
         "content": [
-          "Purpose of processing",
           "Contact with a client who left a request in the feedback form on the site",
-          "Personal Information",
-          "Email address, username",
-          "Legal Grounds",
-          "Federal Law On Information, Information Technologies and Information Protection dated July 27 2006 N 149-FZ",
-          "Types of personal data processing",
-          "Sending informational emails to an email address"
+          "Answer to a user question"
         ]
       },
       {
@@ -453,16 +447,29 @@
         ]
       },
       {
-        "title": "12. Final Provisions",
+        "title": "12. Types of processed personal data",
         "content": [
-          "12.1. The User can receive any clarifications on issues of interest regarding the processing of his personal data by contacting the Operator via e-mail info@eccotexx-eng.com.",
-          "12.2. This document will reflect any changes to the personal data processing policy by the Operator. The policy is valid indefinitely until it is replaced by a new version.",
-          "12.3. The current version of the Policy is freely available on the Internet at https://eccotexx-eng.com and is available in a pop-up window by clicking the \"Personal Data Privacy Policy\" button in the site footer."
+           "Name",
+           "E-mail address",
+           "Description of the question/problem of the user",
+           "12.1. The site also collects and processes anonymous data about visitors (including cookies) using Internet statistics services (Yandex Metrika).",
+           "12.2. This website uses the Yandex Metrika web analytics service provided by YANDEX LLC, 119021, Russia, Moscow, L. Tolstoy St., 16 (hereinafter referred to as Yandex).",
+           "12.3. The Yandex Metrica service uses 'cookie' technology - small text files placed on users' computers in order to analyze their user activity.",
+           "12.4. The information collected by the cookie cannot identify you, but it can help us improve the performance of our site. Information about your use of this site, collected by the cookie, will be transmitted to Yandex and stored on a Yandex server in the EU and the Russian Federation. Yandex will process this information to evaluate your use of the site, compile reports for us on the activities of our site, and provide other services. Yandex processes this information in the manner specified in the terms of use of the Yandex Metrica service.",
+           "12.5. You can refuse the use of cookies by selecting the appropriate settings in your browser. You can also use the tool - https://yandex.ru/support/metrika/general/opt-out.html. However, this may affect the operation of some functions By using this site, you agree to the processing of data about you by Yandex in the manner and for the purposes specified above."
+        ]
+      },
+      {
+        "title": "13. Final Provisions",
+        "content": [
+          "13.1. The User can receive any clarifications on issues of interest regarding the processing of his personal data by contacting the Operator via e-mail info@eccotexx-eng.com.",
+          "13.2. This document will reflect any changes to the personal data processing policy by the Operator. The policy is valid indefinitely until it is replaced by a new version.",
+          "13.3. The current version of the Policy is freely available on the Internet at https://eccotexx-eng.com and is available in a pop-up window by clicking the \"Personal Data Privacy Policy\" button in the site footer."
         ]
       }
     ]
   },
   "closePopup": "Close",
   "consentCookie": "I agree",
-  "cookieMessage": "We use cookies to give you the best experience on our site. If you continue to use the site, we'll assume you're happy with it."
+  "cookieMessage": "We use Cookies to provide the best user experience when visiting our site. If you stay on the site, you will automatically agree to their use."
 }
