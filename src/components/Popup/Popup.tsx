@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren, SyntheticEvent, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
+import { useTranslation } from 'react-i18next';
 import styles from './Popup.module.css';
 import ModalOverlay from '../ModalOverlay/ModalOverlay';
 import { KeyboardKeys, MODAL_ROOT_SELECTOR } from '../../utils/config';
@@ -20,6 +21,7 @@ const Popup: FC<PropsWithChildren<Props>> = ({
   styleModifier: style = undefined,
   children,
 }) => {
+  const { t } = useTranslation();
   const handleCloseClick = (event: SyntheticEvent) => {
     event.preventDefault();
     onClose();
@@ -42,9 +44,10 @@ const Popup: FC<PropsWithChildren<Props>> = ({
         <ModalOverlay closeModal={onClose} />
         <div className={b('wrap', { type, style })}>
           <button
+            type="button"
             className={b('close')}
             onClick={handleCloseClick}
-            aria-label="Закрыть окно"
+            aria-label={t('closePopup')}
           />
           <div className={b('content')}>{children}</div>
         </div>

@@ -1,0 +1,30 @@
+.cookie-notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-green);
+  padding: 20px;
+  box-shadow: 0 -5px 80px #000;
+  z-index: 1500;
+}
+
+.cookie-notification__message {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.cookie-notification__link {
+  display: block;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 auto 20px;
+}
+
+.cookie-notification__button {
+  display: block;
+  border: 0;
+  padding: 5px 15px;
+  margin: 0 auto;
+}

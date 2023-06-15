@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 1600;
 }
 
 .popup__wrap {
@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   background-color: var(--color-green);
   padding: 50px;
-  max-height: calc(100vh - 20px);
+  max-height: calc(100% - 20px);
   overflow-y: hidden;
   display: flex;
   flex-direction: column;

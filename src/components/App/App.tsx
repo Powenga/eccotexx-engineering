@@ -1,4 +1,4 @@
-import { FC, Suspense, useRef, useState } from 'react';
+import { FC, Suspense, useEffect, useRef, useState } from 'react';
 import block from 'bem-css-modules';
 import { useTranslation } from 'react-i18next';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -11,6 +11,9 @@ import Popup from '../Popup/Popup';
 import SuccessMessage from '../PopupContent/SuccessMessage';
 import ErrorMessage from '../PopupContent/ErrorMessage';
 import Policy from '../PopupContent/PolicyContent';
+import { checkLocalStorage } from '../../utils/utils';
+import { COOKIE_LOCAL_STORAGE_KEY } from '../../utils/config';
+import CookieNotification from '../CookieNotification/CookieNotification';
 
 const b = block(styles);
 
@@ -23,6 +26,7 @@ const App: FC = () => {
   const [isCallbackSuccess, setIsCallbackSuccess] = useState(false);
   const [isCallbackError, setIsCallbackError] = useState(false);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [shouldCookieShow, setShouldCookieShow] = useState(true);
 
   const callbackRef = useRef<HTMLElement>(null);
 
@@ -61,6 +65,19 @@ const App: FC = () => {
   const scrollToCallback = () => {
     callbackRef.current?.scrollIntoView();
   };
+
+  const consentCookie = () => {
+    if (checkLocalStorage()) {
+      localStorage.setItem(COOKIE_LOCAL_STORAGE_KEY, 'true');
+    }
+    setShouldCookieShow(false);
+  };
+
+  useEffect(() => {
+    if (checkLocalStorage() && localStorage.getItem(COOKIE_LOCAL_STORAGE_KEY)) {
+      setShouldCookieShow(false);
+    }
+  }, []);
 
   return (
     <HelmetProvider>
@@ -102,6 +119,12 @@ const App: FC = () => {
           <Popup onClose={closePolicy} type="policy">
             <Policy />
           </Popup>
+        )}
+        {shouldCookieShow && (
+          <CookieNotification
+            onPolicyClick={openPolicy}
+            onConsent={consentCookie}
+          />
         )}
       </Suspense>
     </HelmetProvider>
