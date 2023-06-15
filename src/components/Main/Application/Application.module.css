@@ -1,0 +1,15 @@
+.application {
+  display: block;
+}
+
+.application__video {
+  border: 0;
+  width: calc(892 / 1258 * 100%);
+  aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 1360px) {
+  .application__video {
+    width: 100%;
+  }
+}

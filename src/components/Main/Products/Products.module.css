@@ -2,11 +2,6 @@
   display: block;
 }
 
-.products__title {
-  margin: 0 0 50px;
-  text-transform: uppercase;
-}
-
 .products__list {
   margin: 0;
   padding: 0;

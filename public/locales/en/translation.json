@@ -210,6 +210,10 @@
       }
     ]
   },
+  "application": {
+    "title": "Product Application",
+    "videoID": "lDjPboSw5bA"
+  },
   "advantages": {
     "title": "Benefits of working with a company",
     "entities": [
