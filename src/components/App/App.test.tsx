@@ -5,16 +5,6 @@ import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from '../../services/i18next';
 
-// jest.mock('react-router-dom', () => {
-//   const originalModule = jest.requireActual('react-router-dom');
-//   return {
-//     __esModule: true,
-//     ...originalModule,
-//     useRoutes: () => <div />,
-//   };
-// });
-
-
 const spy = jest
   .spyOn(document.documentElement, 'setAttribute')
   .mockImplementation(() => '');
