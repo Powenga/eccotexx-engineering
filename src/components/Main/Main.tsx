@@ -9,6 +9,7 @@ import Advantages from './Advantages/Advantages';
 import Interaction from './Interaction/Interaction';
 import Callback from './Callback/Callback';
 import Contacts from './Contacts/Contacts';
+import Application from './Application/Application';
 
 const b = block(styles);
 
@@ -32,6 +33,9 @@ const Main = forwardRef<HTMLElement, Props>(
       </section>
       <section id="objects" className={b('section', { type: 'wide' })}>
         <Objects />
+      </section>
+      <section className={b('section')}>
+        <Application />
       </section>
       <section id="advantages" className={b('section')}>
         <Advantages />

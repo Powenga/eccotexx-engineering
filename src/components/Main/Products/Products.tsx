@@ -11,8 +11,8 @@ const Products: FC = () => {
   const { t } = useTranslation();
   return (
     <div className={b()}>
-      <Text Tag={TextTag.h2} type={TextType.title} className={b('title')}>
-        {t('products.title' as never)}
+      <Text Tag={TextTag.h2} type={TextType.title}>
+        {t('products.title')}
       </Text>
       <ul className={b('list')}>
         {t('products.entities', { returnObjects: true }).map(
