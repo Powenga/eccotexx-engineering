@@ -12,7 +12,9 @@ const PolicyContent: FC = () => {
       {t('paragraphs', { returnObjects: true }).map(({ title, content }) => (
         <Fragment key={title}>
           <Text type={TextType.popupContent}>{title}</Text>
-          {content.map((elem) => (
+          {content?.map((elem) => (
+
+            
             <Text key={elem} type={TextType.policyParagraph}>
               {elem}
             </Text>
