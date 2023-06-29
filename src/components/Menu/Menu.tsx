@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
 import { useTranslation } from 'react-i18next';
@@ -16,6 +16,13 @@ const MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
 
 const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { t } = useTranslation();
+  const focusElementRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (focusElementRef.current) {
+      focusElementRef.current.focus();
+    }
+  }, []);
+
   useEffect(() => {
     function handleEscPress(event: KeyboardEvent) {
       if (event.key === KeyboardKeys.esc) {
@@ -30,7 +37,7 @@ const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   if (MODAL_ROOT) {
     return createPortal(
-      <div className={b()}>
+      <div ref={focusElementRef} tabIndex={-1} className={b()}>
         <div
           className={b('container')}
           role="dialog"
