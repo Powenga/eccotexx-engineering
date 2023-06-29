@@ -11,7 +11,7 @@ i18next.use(initReactI18next).init({
     en: {
       translation: {
         slides: [],
-        navigation: [],
+        navigation: [{ id: 'test', content: 'nav-test-link' }],
         intro: { content: [] },
         features: [],
         products: { entities: [] },

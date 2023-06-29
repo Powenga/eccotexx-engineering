@@ -33,7 +33,7 @@ const CookieNotification: FC<Props> = ({ onConsent, onPolicyClick }) => {
             type={TextType.footerPolicy}
             style={TextStyle.white}
           >
-            {t('footer.policy')}
+            {t('consentPolicy')}
           </Text>
         </button>
         <button type="button" className={b('button')} onClick={handleClick}>
