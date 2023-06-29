@@ -43,7 +43,7 @@ describe('App policy works correctly', () => {
     );
     expect(await screen.findByText('policy.title')).toBeInTheDocument();
   });
-  it(' policy popup closes', async () => {
+  it('policy popup closes', async () => {
     render(
       <I18nextProvider i18n={i18n}>
         <App />

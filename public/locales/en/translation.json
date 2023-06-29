@@ -4,6 +4,7 @@
   "writeUs": "Contact us",
   "headerLogoAlt": "Logo",
   "headerMenuButtonLabel": "Open menu",
+  "menu": "Menu",
   "navigation": [
     { "id": "company", "content": "Company", "to": "#company" },
     { "id": "products", "content": "Products", "to": "#products" },

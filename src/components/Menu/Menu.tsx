@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
+import { useTranslation } from 'react-i18next';
 import Navigation, { NavigationType } from '../Navigation/Navigation';
 import styles from './Menu.module.css';
 import ModalOverlay from '../ModalOverlay/ModalOverlay';
@@ -14,6 +15,7 @@ const b = block(styles);
 const MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
 
 const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
+  const { t } = useTranslation();
   useEffect(() => {
     function handleEscPress(event: KeyboardEvent) {
       if (event.key === KeyboardKeys.esc) {
@@ -29,7 +31,12 @@ const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
   if (MODAL_ROOT) {
     return createPortal(
       <div className={b()}>
-        <div className={b('container')}>
+        <div
+          className={b('container')}
+          role="dialog"
+          aria-label={t('menu')}
+          aria-modal="true"
+        >
           <Navigation onClick={onClose} type={NavigationType.column} />
           <LanguageSelector
             className={b('lang-sel')}
