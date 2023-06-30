@@ -3,13 +3,16 @@ import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from '../../services/i18nextForTest';
 
+beforeEach(() => {
+  render(
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
+  );
+});
+
 describe('App policy works correctly', () => {
   it('policy popup opens with callback form button', async () => {
-    render(
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    );
     fireEvent.click(
       screen.getByRole('button', {
         name: 'Политикой конфеденциальности',
@@ -18,11 +21,6 @@ describe('App policy works correctly', () => {
     expect(await screen.findByText('policy.title')).toBeInTheDocument();
   });
   it('policy popup opens with footer button', async () => {
-    render(
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    );
     fireEvent.click(
       screen.getByRole('button', {
         name: 'footer.policy',
@@ -31,11 +29,6 @@ describe('App policy works correctly', () => {
     expect(await screen.findByText('policy.title')).toBeInTheDocument();
   });
   it('policy popup opens with consent message button', async () => {
-    render(
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    );
     fireEvent.click(
       screen.getByRole('button', {
         name: 'consentPolicy',
@@ -44,11 +37,6 @@ describe('App policy works correctly', () => {
     expect(await screen.findByText('policy.title')).toBeInTheDocument();
   });
   it('policy popup closes', async () => {
-    render(
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    );
     fireEvent.click(
       screen.getByRole('button', {
         name: 'consentPolicy',
@@ -63,18 +51,36 @@ describe('App policy works correctly', () => {
 });
 
 describe('App menu', () => {
-  it('opens with button', async () => {
-    render(
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
-    );
+  it('opens with button and closes with overalay click', async () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: 'headerMenuButtonLabel',
       })
     );
-    screen.debug()
-    expect((await screen.findAllByText('nav-test-link')).length).toBe(3);
+    expect(
+      await screen.findByRole('dialog', { name: 'menu' })
+    ).toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('modal-overlay'));
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('dialog', { name: 'menu' })
+      ).not.toBeInTheDocument();
+    });
+  });
+  it('opens with button and closes with Esc', async () => {
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'headerMenuButtonLabel',
+      })
+    );
+    expect(
+      await screen.findByRole('dialog', { name: 'menu' })
+    ).toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'Escape' });
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('dialog', { name: 'menu' })
+      ).not.toBeInTheDocument();
+    });
   });
 });

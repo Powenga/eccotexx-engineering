@@ -12,7 +12,14 @@ import LanguageSelector, {
 
 const b = block(styles);
 
-const MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
+let MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
+
+if (!MODAL_ROOT) {
+  const modalRoot = document.createElement('div');
+  modalRoot.setAttribute('id', 'modal');
+  document.body.appendChild(modalRoot);
+  MODAL_ROOT = modalRoot;
+}
 
 const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { t } = useTranslation();
