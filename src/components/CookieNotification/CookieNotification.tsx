@@ -7,7 +7,14 @@ import styles from './CookieNotification.module.css';
 import Text, { TextStyle, TextTag, TextType } from '../Text/Text';
 
 const b = block(styles);
-const MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
+let MODAL_ROOT = document.querySelector(MODAL_ROOT_SELECTOR);
+
+if (!MODAL_ROOT) {
+  const modalRoot = document.createElement('div');
+  modalRoot.setAttribute('id', 'modal');
+  document.body.appendChild(modalRoot);
+  MODAL_ROOT = modalRoot;
+}
 
 type Props = {
   onPolicyClick: () => void;

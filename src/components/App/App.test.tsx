@@ -8,6 +8,7 @@ import {
 import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from '../../services/i18nextForTest';
+import { COOKIE_LOCAL_STORAGE_KEY } from '../../utils/config';
 
 beforeEach(() => {
   render(
@@ -105,5 +106,28 @@ describe('App menu', () => {
         screen.queryByRole('dialog', { name: 'menu' })
       ).not.toBeInTheDocument();
     });
+  });
+});
+
+describe('Cookie notification', () => {
+  it('opens when page is loaded', () => {
+    expect(
+      screen.getByRole('alertdialog', { name: 'consentPolicy' })
+    ).toBeInTheDocument();
+  });
+  it('closes with button and save result to localstorage', async () => {
+    const notification = screen.getByRole('alertdialog', {
+      name: 'consentPolicy',
+    });
+    expect(localStorage.getItem(COOKIE_LOCAL_STORAGE_KEY)).toBe(null);
+    fireEvent.click(
+      within(notification).getByRole('button', { name: 'consentCookie' })
+    );
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('alertdialog', { name: 'consentPolicy' })
+      ).not.toBeInTheDocument();
+    });
+    expect(localStorage.getItem(COOKIE_LOCAL_STORAGE_KEY)).toBe('true');
   });
 });
