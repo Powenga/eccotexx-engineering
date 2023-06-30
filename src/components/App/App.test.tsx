@@ -18,41 +18,73 @@ beforeEach(() => {
   );
 });
 
-describe('App policy works correctly', () => {
-  it('policy popup opens with callback form button', async () => {
+describe('App policy', () => {
+  it('opens with callback form button', async () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: 'Политикой конфеденциальности',
       })
     );
-    expect(await screen.findByText('policy.title')).toBeInTheDocument();
+    expect(
+      await screen.findByRole('dialog', { name: 'policy.title' })
+    ).toBeInTheDocument();
   });
-  it('policy popup opens with footer button', async () => {
+  it('opens with footer button', async () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: 'footer.policy',
       })
     );
-    expect(await screen.findByText('policy.title')).toBeInTheDocument();
+    await screen.findByRole('dialog', { name: 'policy.title' });
   });
-  it('policy popup opens with consent message button', async () => {
+  it('opens with consent message button', async () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: 'consentPolicy',
       })
     );
-    expect(await screen.findByText('policy.title')).toBeInTheDocument();
+    await screen.findByRole('dialog', { name: 'policy.title' });
   });
-  it('policy popup closes', async () => {
+  it('closes with close button', async () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: 'consentPolicy',
       })
     );
-    expect(await screen.findByText('policy.title')).toBeInTheDocument();
-    fireEvent.click(await screen.findByLabelText('closePopup'));
+    await screen.findByRole('dialog', { name: 'policy.title' });
+    fireEvent.click(await screen.findByRole('button', { name: 'closePopup' }));
     await waitFor(() => {
-      expect(screen.queryByText('policy.title')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('dialog', { name: 'policy.title' })
+      ).not.toBeInTheDocument();
+    });
+  });
+  it('closes with escape', async () => {
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'consentPolicy',
+      })
+    );
+    await screen.findByRole('dialog', { name: 'policy.title' });
+    fireEvent.keyDown(document, { key: 'Escape' });
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('dialog', { name: 'policy.title' })
+      ).not.toBeInTheDocument();
+    });
+  });
+  it('closes with overlay click', async () => {
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'consentPolicy',
+      })
+    );
+    await screen.findByRole('dialog', { name: 'policy.title' });
+    fireEvent.click(screen.getByTestId('modal-overlay'));
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('dialog', { name: 'policy.title' })
+      ).not.toBeInTheDocument();
     });
   });
 });
