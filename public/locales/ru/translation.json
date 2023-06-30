@@ -5,6 +5,10 @@
   "headerLogoAlt": "Логотип",
   "headerMenuButtonLabel": "Открыть меню",
   "menu": "Меню",
+  "langs": {
+    "english": "Английский язык",
+    "russian": "Русский язык"
+  },
   "navigation": [
     { "id": "company", "content": "Компания", "to": "#company" },
     { "id": "products", "content": "Продукция", "to": "#products" },
