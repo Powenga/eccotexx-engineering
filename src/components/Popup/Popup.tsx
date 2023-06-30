@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, SyntheticEvent, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import FocusLock from 'react-focus-lock';
 import block from 'bem-css-modules';
-import FocusTrap from 'focus-trap-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Popup.module.css';
 import ModalOverlay from '../ModalOverlay/ModalOverlay';
@@ -48,8 +48,8 @@ const Popup: FC<PropsWithChildren<Props>> = ({
   }, [onClose]);
   if (MODAL_ROOT) {
     return createPortal(
-      <FocusTrap>
-        <div className={b()} tabIndex={-1}>
+      <FocusLock returnFocus>
+        <div className={b()}>
           <ModalOverlay closeModal={onClose} />
           <div className={b('wrap', { type, style })}>
             <button
@@ -61,7 +61,7 @@ const Popup: FC<PropsWithChildren<Props>> = ({
             <div className={b('content')}>{children}</div>
           </div>
         </div>
-      </FocusTrap>,
+      </FocusLock>,
       MODAL_ROOT
     );
   }

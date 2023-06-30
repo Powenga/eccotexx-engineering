@@ -1,6 +1,7 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
+import FocusLock from 'react-focus-lock';
 import { useTranslation } from 'react-i18next';
 import Navigation, { NavigationType } from '../Navigation/Navigation';
 import styles from './Menu.module.css';
@@ -23,12 +24,6 @@ if (!MODAL_ROOT) {
 
 const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { t } = useTranslation();
-  const focusElementRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (focusElementRef.current) {
-      focusElementRef.current.focus();
-    }
-  }, []);
 
   useEffect(() => {
     function handleEscPress(event: KeyboardEvent) {
@@ -44,25 +39,29 @@ const Menu: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   if (MODAL_ROOT) {
     return createPortal(
-      <div ref={focusElementRef} tabIndex={-1} className={b()}>
-        <div
-          className={b('container')}
-          role="dialog"
-          aria-label={t('menu')}
-          aria-modal="true"
-        >
-          <Navigation onClick={onClose} type={NavigationType.column} />
-          <LanguageSelector
-            className={b('lang-sel')}
-            type={LanguageSelectorTypes.row}
-          />
-        </div>
-        <ModalOverlay closeModal={onClose} />
+      <div className={b()}>
+        <FocusLock returnFocus>
+          <div>
+            <div
+              className={b('container')}
+              role="dialog"
+              aria-label={t('menu')}
+              aria-modal="true"
+            >
+              <Navigation onClick={onClose} type={NavigationType.column} />
+
+              <LanguageSelector
+                className={b('lang-sel')}
+                type={LanguageSelectorTypes.row}
+              />
+            </div>
+            <ModalOverlay closeModal={onClose} />
+          </div>
+        </FocusLock>
       </div>,
       MODAL_ROOT
     );
   }
-
   return null;
 };
 
