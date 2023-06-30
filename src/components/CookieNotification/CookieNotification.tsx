@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent } from 'react';
+import { FC, SyntheticEvent, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
 import { useTranslation } from 'react-i18next';
@@ -16,10 +16,17 @@ type Props = {
 
 const CookieNotification: FC<Props> = ({ onConsent, onPolicyClick }) => {
   const { t } = useTranslation();
+  const focusRef = useRef<HTMLDivElement>(null);
   const handleClick = (event: SyntheticEvent) => {
     event.preventDefault();
     onConsent();
   };
+
+  useEffect(() => {
+    if (focusRef.current) {
+      focusRef.current.focus();
+    }
+  }, []);
 
   if (MODAL_ROOT) {
     return createPortal(
@@ -28,6 +35,8 @@ const CookieNotification: FC<Props> = ({ onConsent, onPolicyClick }) => {
         role="alertdialog"
         aria-modal
         aria-label={t('consentPolicy')}
+        tabIndex={-1}
+        ref={focusRef}
       >
         <Text className={b('message')} style={TextStyle.white}>
           {t('cookieMessage')}
