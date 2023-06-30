@@ -1,6 +1,7 @@
 import { FC, SyntheticEvent, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import block from 'bem-css-modules';
+import FocusLock from 'react-focus-lock';
 import { useTranslation } from 'react-i18next';
 import { MODAL_ROOT_SELECTOR } from '../../utils/config';
 import styles from './CookieNotification.module.css';
@@ -37,30 +38,32 @@ const CookieNotification: FC<Props> = ({ onConsent, onPolicyClick }) => {
 
   if (MODAL_ROOT) {
     return createPortal(
-      <div
-        className={b()}
-        role="alertdialog"
-        aria-modal
-        aria-label={t('consentPolicy')}
-        tabIndex={-1}
-        ref={focusRef}
-      >
-        <Text className={b('message')} style={TextStyle.white}>
-          {t('cookieMessage')}
-        </Text>
-        <button type="button" className={b('link')} onClick={onPolicyClick}>
-          <Text
-            Tag={TextTag.span}
-            type={TextType.footerPolicy}
-            style={TextStyle.white}
-          >
-            {t('consentPolicy')}
+      <FocusLock autoFocus={false}>
+        <div
+          className={b()}
+          role="alertdialog"
+          aria-modal
+          aria-label={t('consentPolicy')}
+          tabIndex={-1}
+          ref={focusRef}
+        >
+          <Text className={b('message')} style={TextStyle.white}>
+            {t('cookieMessage')}
           </Text>
-        </button>
-        <button type="button" className={b('button')} onClick={handleClick}>
-          <Text Tag={TextTag.span}> {t('consentCookie')}</Text>
-        </button>
-      </div>,
+          <button type="button" className={b('link')} onClick={onPolicyClick}>
+            <Text
+              Tag={TextTag.span}
+              type={TextType.footerPolicy}
+              style={TextStyle.white}
+            >
+              {t('consentPolicy')}
+            </Text>
+          </button>
+          <button type="button" className={b('button')} onClick={handleClick}>
+            <Text Tag={TextTag.span}> {t('consentCookie')}</Text>
+          </button>
+        </div>
+      </FocusLock>,
       MODAL_ROOT
     );
   }
