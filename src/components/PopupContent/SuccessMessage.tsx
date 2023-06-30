@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import Text, { TextTag, TextType } from '../Text/Text';
 
@@ -8,22 +8,12 @@ const SuccessMessage: FC = () => {
   const { t } = useTranslation('translation', {
     keyPrefix: 'messages.success',
   });
-  const focusRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (focusRef.current) {
-      focusRef.current.focus();
-    }
-  }, []);
 
   return (
     <div
-      ref={focusRef}
-      tabIndex={-1}
       role="alertdialog"
       aria-labelledby={SUCCESS_MESSAGE_TITLE_ID}
       aria-modal
-      style={{ outline: 'none' }}
     >
       <Text
         id={SUCCESS_MESSAGE_TITLE_ID}

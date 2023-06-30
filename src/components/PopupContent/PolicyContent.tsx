@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef } from 'react';
+import { FC, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import Text, { TextTag, TextType } from '../Text/Text';
 
@@ -6,23 +6,9 @@ const POLICY_CONTENT_TITLE_ID = 'policy-content-title';
 
 const PolicyContent: FC = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'policy' });
-  const focusRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (focusRef.current) {
-      focusRef.current.focus();
-    }
-  }, []);
 
   return (
-    <div
-      ref={focusRef}
-      tabIndex={-1}
-      role="dialog"
-      aria-labelledby={POLICY_CONTENT_TITLE_ID}
-      aria-modal
-      style={{ outline: 'none' }}
-    >
+    <div role="dialog" aria-labelledby={POLICY_CONTENT_TITLE_ID} aria-modal>
       <Text
         Tag={TextTag.h3}
         type={TextType.popupTitle}
