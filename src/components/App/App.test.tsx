@@ -1,4 +1,10 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from '../../services/i18nextForTest';
@@ -77,6 +83,23 @@ describe('App menu', () => {
       await screen.findByRole('dialog', { name: 'menu' })
     ).toBeInTheDocument();
     fireEvent.keyDown(document, { key: 'Escape' });
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('dialog', { name: 'menu' })
+      ).not.toBeInTheDocument();
+    });
+  });
+  it('closes with link click', async () => {
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'headerMenuButtonLabel',
+      })
+    );
+    const menu = await screen.findByRole('dialog', { name: 'menu' });
+    expect(menu).toBeInTheDocument();
+    fireEvent.click(
+      await within(menu).findByRole('link', { name: 'nav-test-link' })
+    );
     await waitFor(() => {
       expect(
         screen.queryByRole('dialog', { name: 'menu' })
