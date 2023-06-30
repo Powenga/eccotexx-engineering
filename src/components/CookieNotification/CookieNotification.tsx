@@ -23,7 +23,12 @@ const CookieNotification: FC<Props> = ({ onConsent, onPolicyClick }) => {
 
   if (MODAL_ROOT) {
     return createPortal(
-      <div className={b()}>
+      <div
+        className={b()}
+        role="alertdialog"
+        aria-modal
+        aria-label={t('consentPolicy')}
+      >
         <Text className={b('message')} style={TextStyle.white}>
           {t('cookieMessage')}
         </Text>
