@@ -67,11 +67,13 @@ export interface IText {
   align?: TextAlign;
   className?: string;
   hovered?: boolean;
+  id?: string;
 }
 
 const Text = forwardRef<HTMLParagraphElement, PropsWithChildren<IText>>(
   (
     {
+      id = undefined,
       Tag = TextTag.p,
       type = TextType.main,
       style = undefined,
@@ -84,6 +86,7 @@ const Text = forwardRef<HTMLParagraphElement, PropsWithChildren<IText>>(
     ref
   ) => (
     <Tag
+      id={id}
       ref={ref}
       className={cn(
         className,

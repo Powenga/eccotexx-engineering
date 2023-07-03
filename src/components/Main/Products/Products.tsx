@@ -47,7 +47,7 @@ const Products: FC = () => {
                   </Trans>
                 </Text>
                 <ul className={b('advantages')}>
-                  {advantages.map((elem, advantagesIndex) => (
+                  {advantages?.map((elem, advantagesIndex) => (
                     <li key={elem}>
                       <Text className={b('advantages-text')}>
                         <span className={b('advantages-icon')}>

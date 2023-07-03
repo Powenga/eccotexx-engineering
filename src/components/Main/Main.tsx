@@ -43,7 +43,7 @@ const Main = forwardRef<HTMLElement, Props>(
       <section id="cooperation" className={b('section')}>
         <Interaction />
       </section>
-      <section ref={ref} className={b('section')}>
+      <section ref={ref} className={b('section')} tabIndex={-1}>
         <Callback
           onPolicyClick={onPolicyClick}
           onSuccess={handleSuccessMessage}

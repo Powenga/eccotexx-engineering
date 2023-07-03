@@ -7,6 +7,7 @@
   padding: 20px;
   box-shadow: 0 -5px 80px #000;
   z-index: 1500;
+  outline: none;
 }
 
 .cookie-notification__message {

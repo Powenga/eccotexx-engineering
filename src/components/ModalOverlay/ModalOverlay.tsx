@@ -17,7 +17,7 @@ type TModalOverlay = {
 
 const ModalOverlay: FC<TModalOverlay> = ({ closeModal }) => {
   const overlayRef = useRef(null);
-  
+
   useLockBodyScroll(true);
 
   function handleClick(event: SyntheticEvent) {
@@ -26,7 +26,9 @@ const ModalOverlay: FC<TModalOverlay> = ({ closeModal }) => {
     }
   }
 
-  return <div ref={overlayRef} style={style} onClickCapture={handleClick} />;
+  return (
+    <div data-testid="modal-overlay" ref={overlayRef} style={style} onClick={handleClick} aria-hidden />
+  );
 };
 
 export default ModalOverlay;

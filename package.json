@@ -18,6 +18,7 @@
     "i18next-http-backend": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-focus-lock": "^2.9.4",
     "react-helmet-async": "^1.3.0",
     "react-i18next": "^12.3.1",
     "react-scripts": "5.0.1",
@@ -29,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --colors",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "deploy": "npm run build && scp -r -O ./build/* eccotexx@eccotexx.beget.tech:/home/e/eccotexx/engineering.eccotexx.com/public_html"
@@ -63,6 +64,15 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "msw": "^1.2.2",
     "prettier": "2.8.7"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/?!swiper/"
+    ],
+    "moduleNameMapper": {
+      "swiper/css": "swiper/swiper.min.css"
+    }
   }
 }

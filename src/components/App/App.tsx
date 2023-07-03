@@ -64,6 +64,7 @@ const App: FC = () => {
 
   const scrollToCallback = () => {
     callbackRef.current?.scrollIntoView();
+    callbackRef.current?.focus({ preventScroll: true });
   };
 
   const consentCookie = () => {

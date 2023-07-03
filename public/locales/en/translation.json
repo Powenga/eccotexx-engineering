@@ -4,6 +4,11 @@
   "writeUs": "Contact us",
   "headerLogoAlt": "Logo",
   "headerMenuButtonLabel": "Open menu",
+  "menu": "Menu",
+  "langs": {
+    "english": "English",
+    "russian": "Russian"
+  },
   "navigation": [
     { "id": "company", "content": "Company", "to": "#company" },
     { "id": "products", "content": "Products", "to": "#products" },
@@ -453,14 +458,14 @@
       {
         "title": "12. Types of processed personal data",
         "content": [
-           "Name",
-           "E-mail address",
-           "Description of the question/problem of the user",
-           "12.1. The site also collects and processes anonymous data about visitors (including cookies) using Internet statistics services (Yandex Metrika).",
-           "12.2. This website uses the Yandex Metrika web analytics service provided by YANDEX LLC, 119021, Russia, Moscow, L. Tolstoy St., 16 (hereinafter referred to as Yandex).",
-           "12.3. The Yandex Metrica service uses 'cookie' technology - small text files placed on users' computers in order to analyze their user activity.",
-           "12.4. The information collected by the cookie cannot identify you, but it can help us improve the performance of our site. Information about your use of this site, collected by the cookie, will be transmitted to Yandex and stored on a Yandex server in the EU and the Russian Federation. Yandex will process this information to evaluate your use of the site, compile reports for us on the activities of our site, and provide other services. Yandex processes this information in the manner specified in the terms of use of the Yandex Metrica service.",
-           "12.5. You can refuse the use of cookies by selecting the appropriate settings in your browser. You can also use the tool - https://yandex.ru/support/metrika/general/opt-out.html. However, this may affect the operation of some functions By using this site, you agree to the processing of data about you by Yandex in the manner and for the purposes specified above."
+          "Name",
+          "E-mail address",
+          "Description of the question/problem of the user",
+          "12.1. The site also collects and processes anonymous data about visitors (including cookies) using Internet statistics services (Yandex Metrika).",
+          "12.2. This website uses the Yandex Metrika web analytics service provided by YANDEX LLC, 119021, Russia, Moscow, L. Tolstoy St., 16 (hereinafter referred to as Yandex).",
+          "12.3. The Yandex Metrica service uses 'cookie' technology - small text files placed on users' computers in order to analyze their user activity.",
+          "12.4. The information collected by the cookie cannot identify you, but it can help us improve the performance of our site. Information about your use of this site, collected by the cookie, will be transmitted to Yandex and stored on a Yandex server in the EU and the Russian Federation. Yandex will process this information to evaluate your use of the site, compile reports for us on the activities of our site, and provide other services. Yandex processes this information in the manner specified in the terms of use of the Yandex Metrica service.",
+          "12.5. You can refuse the use of cookies by selecting the appropriate settings in your browser. You can also use the tool - https://yandex.ru/support/metrika/general/opt-out.html. However, this may affect the operation of some functions By using this site, you agree to the processing of data about you by Yandex in the manner and for the purposes specified above."
         ]
       },
       {
@@ -475,5 +480,6 @@
   },
   "closePopup": "Close",
   "consentCookie": "I agree",
-  "cookieMessage": "We use Cookies to provide the best user experience when visiting our site. If you stay on the site, you will automatically agree to their use."
+  "cookieMessage": "We use Cookies to provide the best user experience when visiting our site. If you stay on the site, you will automatically agree to their use.",
+  "consentPolicy": "Privacy policy"
 }

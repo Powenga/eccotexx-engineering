@@ -4,6 +4,6 @@ export enum LangKey {
 }
 
 export enum LangNativeName {
-  en = 'English',
-  ru = 'Russian',
+  en = 'english',
+  ru = 'russian',
 }

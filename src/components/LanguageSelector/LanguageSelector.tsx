@@ -18,7 +18,7 @@ type Props = {
 };
 
 const LanguageSelector: FC<Props> = ({ type = undefined, className }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={cn(b({ type }), className)}>
@@ -34,7 +34,7 @@ const LanguageSelector: FC<Props> = ({ type = undefined, className }) => {
               className={b('button', {
                 current: key === i18n.resolvedLanguage,
               })}
-              aria-label={nativeName}
+              aria-label={t(`langs.${nativeName}` as never)}
               value={key}
             >
               <Text Tag={TextTag.span} type={TextType.lang}>
